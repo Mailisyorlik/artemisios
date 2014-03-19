@@ -27,4 +27,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)movetext:(id)sender
+{
+    NSLog(@"button pressed %@ ", self.artemistextbox.text);
+    [[self usernameLabel] setText:self.artemistextbox.text];
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 @end

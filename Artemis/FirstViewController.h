@@ -11,6 +11,9 @@
 @interface FirstViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UILabel *usernameLabel;
+@property (nonatomic, strong) IBOutlet UITextField *artemistextbox;
+-(IBAction)movetext:(id)sender;
 
 
 @end
+
