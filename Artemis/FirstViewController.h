@@ -10,4 +10,7 @@
 
 @interface FirstViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel *usernameLabel;
+
+
 @end

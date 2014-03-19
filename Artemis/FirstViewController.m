@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    [[self usernameLabel] setText:@"Hello World"];
 }
 
 - (void)didReceiveMemoryWarning
