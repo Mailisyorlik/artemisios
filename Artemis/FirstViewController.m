@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
 	
-    [[self usernameLabel] setText:@"Hello World"];
+    [[self usernameLabel] setText:@"Welcome"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,7 +33,6 @@
     [[self usernameLabel] setText:self.artemistextbox.text];
     
 }
-
 
 
 

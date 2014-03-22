@@ -10,9 +10,11 @@
 
 @interface FirstViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UILabel *usernameLabel;
-@property (nonatomic, strong) IBOutlet UITextField *artemistextbox;
+@property (nonatomic, strong) IBOutlet UITextField *username;
+@property (nonatomic, strong) IBOutlet UITextField *password;
+
 -(IBAction)movetext:(id)sender;
+
 
 
 @end
