@@ -20,7 +20,15 @@
 	
     [[self usernameLabel] setText:@"Welcome"];
 }
-
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if (![usernameLabel currentUser]) { //no user logged in
+        //Create the log in view controller
+        PFLogInViewController *FirstViewController = [[PFLogInViewController alloc] init]
+        [logInViewController set delegate:self]; //Set ourselves as the deleagate
+        
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
