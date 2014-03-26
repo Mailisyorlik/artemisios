@@ -12,10 +12,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSLog(@"Application Did Finish Launching");
     return YES;
-}
-							
+
+#import "AppDelegate.h"
+    
+    @implementation AppDelegate
+    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+    {
+        CGRect viewRect = [[UIScreen mainScreen] bounds];
+        self.window = [[UIWindow alloc] initWithFrame:viewRect];
+        UIViewController *viewController = [[UIViewController alloc] init];
+        UIView *view = [[UIView alloc] initWithFrame:viewRect];
+        
+        view.backgroundColor = [UIColor lightGrayColor];
+        
+        viewController.view = view;
+        
+        self.window.rootViewController = viewController;
+        [self.window makeKeyAndVisible];
+        
+        NSLog(@"Screen is %f tall and %f wide", viewRect.size.height, viewRect.size.width);
+        
+        return YES;
+    }
+    @end
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -44,3 +65,8 @@
 }
 
 @end
+    
+    
+    
+    
+
