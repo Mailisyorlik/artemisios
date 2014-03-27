@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C39090F18E3DB7300D2522E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C370518D9269900A55664 /* AppDelegate.m */; };
 		0C5C36F618D9269900A55664 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F518D9269900A55664 /* Foundation.framework */; };
 		0C5C36F818D9269900A55664 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F718D9269900A55664 /* CoreGraphics.framework */; };
 		0C5C36FA18D9269900A55664 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F918D9269900A55664 /* UIKit.framework */; };
@@ -204,6 +205,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = artemis;
 				TargetAttributes = {
+					0C5C36F118D9269900A55664 = {
+						SystemCapabilities = {
+							com.apple.iOS = {
+								enabled = 0;
+							};
+						};
+					};
 					0C5C371518D9269900A55664 = {
 						TestTargetID = 0C5C36F118D9269900A55664;
 					};
@@ -265,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C39090F18E3DB7300D2522E /* AppDelegate.m in Sources */,
 				0C5C372418D9269900A55664 /* ArtemisTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +473,7 @@
 				0C5C372918D9269900A55664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C5C372A18D9269900A55664 /* Build configuration list for PBXNativeTarget "ArtemisTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +482,7 @@
 				0C5C372C18D9269900A55664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
