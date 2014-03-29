@@ -17,7 +17,8 @@
 
 #import "AppDelegate.h"
     
-    @implementation AppDelegate
+@implementation AppDelegate
+   
     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     {
         CGRect viewRect = [[UIScreen mainScreen] bounds];
@@ -92,4 +93,5 @@
     
     
 @end
+    @end }
 @end
