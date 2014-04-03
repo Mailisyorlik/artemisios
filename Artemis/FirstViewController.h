@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
-
 @property (nonatomic, strong) IBOutlet UITextField *username;
 @property (nonatomic, strong) IBOutlet UITextField *password;
+@property (weak, atomic) IBOutlet UIImageView *didReceiveMemoryWarning;
 
--(IBAction)movetext:(id)sender;
+
 
 
 
