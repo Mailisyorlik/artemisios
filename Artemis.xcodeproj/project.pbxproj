@@ -26,6 +26,23 @@
 		0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */; };
 		0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */; };
 		0C8637D718ECFE00004B344F /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8637D618ECFE00004B344F /* TagViewController.m */; };
+		244C36F418F4AEE200899958 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36E918F4AEE200899958 /* BLEDevice.m */; };
+		244C36F518F4AEE200899958 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36EB18F4AEE200899958 /* BLEUtility.m */; };
+		244C36F618F4AEE200899958 /* deviceCellTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36ED18F4AEE200899958 /* deviceCellTemplate.m */; };
+		244C36F718F4AEE200899958 /* deviceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36EF18F4AEE200899958 /* deviceSelector.m */; };
+		244C36F818F4AEE200899958 /* Sensors.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36F118F4AEE200899958 /* Sensors.m */; };
+		244C36F918F4AEE200899958 /* SensorTagApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36F318F4AEE200899958 /* SensorTagApplicationViewController.m */; };
+		244C370618F4AEFE00899958 /* _icon@2x_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C36FB18F4AEFE00899958 /* _icon@2x_114.png */; };
+		244C370718F4AEFE00899958 /* _icon@2x_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C36FC18F4AEFE00899958 /* _icon@2x_144.png */; };
+		244C370818F4AEFE00899958 /* _icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C36FD18F4AEFE00899958 /* _icon_57.png */; };
+		244C370918F4AEFE00899958 /* _icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C36FE18F4AEFE00899958 /* _icon_72.png */; };
+		244C370A18F4AEFE00899958 /* accelerometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C36FF18F4AEFE00899958 /* accelerometer.png */; };
+		244C370B18F4AEFE00899958 /* barometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C370018F4AEFE00899958 /* barometer.png */; };
+		244C370C18F4AEFE00899958 /* gyroscope.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C370118F4AEFE00899958 /* gyroscope.png */; };
+		244C370D18F4AEFE00899958 /* magnetometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C370218F4AEFE00899958 /* magnetometer.png */; };
+		244C370E18F4AEFE00899958 /* objecttemperature.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C370318F4AEFE00899958 /* objecttemperature.png */; };
+		244C370F18F4AEFE00899958 /* relativehumidity.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C370418F4AEFE00899958 /* relativehumidity.png */; };
+		244C371018F4AEFE00899958 /* temperature.png in Resources */ = {isa = PBXBuildFile; fileRef = 244C370518F4AEFE00899958 /* temperature.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,13 +64,13 @@
 		0C5C36FF18D9269900A55664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C5C370118D9269900A55664 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C5C370318D9269900A55664 /* Artemis-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artemis-Prefix.pch"; sourceTree = "<group>"; };
-		0C5C370418D9269900A55664 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0C5C370518D9269900A55664 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0C5C370418D9269900A55664 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Artemis/AppDelegate.h; sourceTree = "<group>"; };
+		0C5C370518D9269900A55664 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Artemis/AppDelegate.m; sourceTree = "<group>"; };
 		0C5C370818D9269900A55664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0C5C370A18D9269900A55664 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		0C5C370B18D9269900A55664 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0C5C370D18D9269900A55664 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		0C5C370E18D9269900A55664 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		0C5C370A18D9269900A55664 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = Artemis/FirstViewController.h; sourceTree = "<group>"; };
+		0C5C370B18D9269900A55664 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = Artemis/FirstViewController.m; sourceTree = "<group>"; };
+		0C5C370D18D9269900A55664 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = Artemis/SecondViewController.h; sourceTree = "<group>"; };
+		0C5C370E18D9269900A55664 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = Artemis/SecondViewController.m; sourceTree = "<group>"; };
 		0C5C371018D9269900A55664 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0C5C371618D9269900A55664 /* ArtemisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtemisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5C371718D9269900A55664 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,8 +79,31 @@
 		0C5C372318D9269900A55664 /* ArtemisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtemisTests.m; sourceTree = "<group>"; };
 		0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		0C8637D518ECFE00004B344F /* TagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
-		0C8637D618ECFE00004B344F /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
+		0C8637D518ECFE00004B344F /* TagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagViewController.h; path = Artemis/TagViewController.h; sourceTree = "<group>"; };
+		0C8637D618ECFE00004B344F /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagViewController.m; path = Artemis/TagViewController.m; sourceTree = "<group>"; };
+		244C36E818F4AEE200899958 /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDevice.h; sourceTree = "<group>"; };
+		244C36E918F4AEE200899958 /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDevice.m; sourceTree = "<group>"; };
+		244C36EA18F4AEE200899958 /* BLEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEUtility.h; sourceTree = "<group>"; };
+		244C36EB18F4AEE200899958 /* BLEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEUtility.m; sourceTree = "<group>"; };
+		244C36EC18F4AEE200899958 /* deviceCellTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceCellTemplate.h; sourceTree = "<group>"; };
+		244C36ED18F4AEE200899958 /* deviceCellTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceCellTemplate.m; sourceTree = "<group>"; };
+		244C36EE18F4AEE200899958 /* deviceSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deviceSelector.h; sourceTree = "<group>"; };
+		244C36EF18F4AEE200899958 /* deviceSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deviceSelector.m; sourceTree = "<group>"; };
+		244C36F018F4AEE200899958 /* Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sensors.h; sourceTree = "<group>"; };
+		244C36F118F4AEE200899958 /* Sensors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sensors.m; sourceTree = "<group>"; };
+		244C36F218F4AEE200899958 /* SensorTagApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensorTagApplicationViewController.h; sourceTree = "<group>"; };
+		244C36F318F4AEE200899958 /* SensorTagApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SensorTagApplicationViewController.m; sourceTree = "<group>"; };
+		244C36FB18F4AEFE00899958 /* _icon@2x_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "_icon@2x_114.png"; sourceTree = "<group>"; };
+		244C36FC18F4AEFE00899958 /* _icon@2x_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "_icon@2x_144.png"; sourceTree = "<group>"; };
+		244C36FD18F4AEFE00899958 /* _icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _icon_57.png; sourceTree = "<group>"; };
+		244C36FE18F4AEFE00899958 /* _icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _icon_72.png; sourceTree = "<group>"; };
+		244C36FF18F4AEFE00899958 /* accelerometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accelerometer.png; sourceTree = "<group>"; };
+		244C370018F4AEFE00899958 /* barometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barometer.png; sourceTree = "<group>"; };
+		244C370118F4AEFE00899958 /* gyroscope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gyroscope.png; sourceTree = "<group>"; };
+		244C370218F4AEFE00899958 /* magnetometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magnetometer.png; sourceTree = "<group>"; };
+		244C370318F4AEFE00899958 /* objecttemperature.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = objecttemperature.png; sourceTree = "<group>"; };
+		244C370418F4AEFE00899958 /* relativehumidity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = relativehumidity.png; sourceTree = "<group>"; };
+		244C370518F4AEFE00899958 /* temperature.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temperature.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +135,15 @@
 		0C5C36E918D9269900A55664 = {
 			isa = PBXGroup;
 			children = (
+				0C5C370418D9269900A55664 /* AppDelegate.h */,
+				0C5C370518D9269900A55664 /* AppDelegate.m */,
+				0C5C370718D9269900A55664 /* Main.storyboard */,
+				0C8637D518ECFE00004B344F /* TagViewController.h */,
+				0C8637D618ECFE00004B344F /* TagViewController.m */,
+				0C5C370A18D9269900A55664 /* FirstViewController.h */,
+				0C5C370B18D9269900A55664 /* FirstViewController.m */,
+				0C5C370D18D9269900A55664 /* SecondViewController.h */,
+				0C5C370E18D9269900A55664 /* SecondViewController.m */,
 				0C5C36FB18D9269900A55664 /* Bluetooth */,
 				0C5C371D18D9269900A55664 /* ArtemisTests */,
 				0C5C36F418D9269900A55664 /* Frameworks */,
@@ -127,15 +176,19 @@
 		0C5C36FB18D9269900A55664 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
-				0C5C370418D9269900A55664 /* AppDelegate.h */,
-				0C5C370518D9269900A55664 /* AppDelegate.m */,
-				0C5C370718D9269900A55664 /* Main.storyboard */,
-				0C8637D518ECFE00004B344F /* TagViewController.h */,
-				0C8637D618ECFE00004B344F /* TagViewController.m */,
-				0C5C370A18D9269900A55664 /* FirstViewController.h */,
-				0C5C370B18D9269900A55664 /* FirstViewController.m */,
-				0C5C370D18D9269900A55664 /* SecondViewController.h */,
-				0C5C370E18D9269900A55664 /* SecondViewController.m */,
+				244C36FA18F4AEFE00899958 /* Images */,
+				244C36E818F4AEE200899958 /* BLEDevice.h */,
+				244C36E918F4AEE200899958 /* BLEDevice.m */,
+				244C36EA18F4AEE200899958 /* BLEUtility.h */,
+				244C36EB18F4AEE200899958 /* BLEUtility.m */,
+				244C36EC18F4AEE200899958 /* deviceCellTemplate.h */,
+				244C36ED18F4AEE200899958 /* deviceCellTemplate.m */,
+				244C36EE18F4AEE200899958 /* deviceSelector.h */,
+				244C36EF18F4AEE200899958 /* deviceSelector.m */,
+				244C36F018F4AEE200899958 /* Sensors.h */,
+				244C36F118F4AEE200899958 /* Sensors.m */,
+				244C36F218F4AEE200899958 /* SensorTagApplicationViewController.h */,
+				244C36F318F4AEE200899958 /* SensorTagApplicationViewController.m */,
 				0C5C371018D9269900A55664 /* Images.xcassets */,
 				0C5C36FC18D9269900A55664 /* Supporting Files */,
 			);
@@ -170,6 +223,24 @@
 				0C5C372018D9269900A55664 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		244C36FA18F4AEFE00899958 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				244C36FB18F4AEFE00899958 /* _icon@2x_114.png */,
+				244C36FC18F4AEFE00899958 /* _icon@2x_144.png */,
+				244C36FD18F4AEFE00899958 /* _icon_57.png */,
+				244C36FE18F4AEFE00899958 /* _icon_72.png */,
+				244C36FF18F4AEFE00899958 /* accelerometer.png */,
+				244C370018F4AEFE00899958 /* barometer.png */,
+				244C370118F4AEFE00899958 /* gyroscope.png */,
+				244C370218F4AEFE00899958 /* magnetometer.png */,
+				244C370318F4AEFE00899958 /* objecttemperature.png */,
+				244C370418F4AEFE00899958 /* relativehumidity.png */,
+				244C370518F4AEFE00899958 /* temperature.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +327,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C5C371118D9269900A55664 /* Images.xcassets in Resources */,
+				244C370918F4AEFE00899958 /* _icon_72.png in Resources */,
+				244C370D18F4AEFE00899958 /* magnetometer.png in Resources */,
 				0C5C370018D9269900A55664 /* InfoPlist.strings in Resources */,
+				244C370C18F4AEFE00899958 /* gyroscope.png in Resources */,
+				244C370F18F4AEFE00899958 /* relativehumidity.png in Resources */,
+				244C371018F4AEFE00899958 /* temperature.png in Resources */,
+				244C370E18F4AEFE00899958 /* objecttemperature.png in Resources */,
+				244C370818F4AEFE00899958 /* _icon_57.png in Resources */,
+				244C370618F4AEFE00899958 /* _icon@2x_114.png in Resources */,
+				244C370B18F4AEFE00899958 /* barometer.png in Resources */,
+				244C370718F4AEFE00899958 /* _icon@2x_144.png in Resources */,
 				0C5C370918D9269900A55664 /* Main.storyboard in Resources */,
+				244C370A18F4AEFE00899958 /* accelerometer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +358,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				244C36F918F4AEE200899958 /* SensorTagApplicationViewController.m in Sources */,
 				0C8637D718ECFE00004B344F /* TagViewController.m in Sources */,
+				244C36F818F4AEE200899958 /* Sensors.m in Sources */,
+				244C36F518F4AEE200899958 /* BLEUtility.m in Sources */,
 				0C5C370F18D9269900A55664 /* SecondViewController.m in Sources */,
+				244C36F618F4AEE200899958 /* deviceCellTemplate.m in Sources */,
 				0C5C370618D9269900A55664 /* AppDelegate.m in Sources */,
+				244C36F418F4AEE200899958 /* BLEDevice.m in Sources */,
 				0C5C370C18D9269900A55664 /* FirstViewController.m in Sources */,
 				0C5C370218D9269900A55664 /* main.m in Sources */,
+				244C36F718F4AEE200899958 /* deviceSelector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +406,7 @@
 				0C5C370818D9269900A55664 /* Base */,
 			);
 			name = Main.storyboard;
+			path = Artemis;
 			sourceTree = "<group>";
 		};
 		0C5C372018D9269900A55664 /* InfoPlist.strings */ = {
