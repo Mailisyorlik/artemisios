@@ -292,6 +292,9 @@
 				TargetAttributes = {
 					0C5C36F118D9269900A55664 = {
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.iOS = {
 								enabled = 0;
 							};

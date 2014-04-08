@@ -10,11 +10,12 @@
 
     
 #import "AppDelegate.h"
-    
+#import "deviceSelector.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
        return YES;
 }
 

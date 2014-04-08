@@ -65,6 +65,35 @@
             </objects>
             <point key="canvasLocation" x="1137" y="-845"/>
         </scene>
+        <!--Device Selector - Item-->
+        <scene sceneID="Bpg-b0-Vgh">
+            <objects>
+                <tableViewController id="taZ-uj-jve" customClass="deviceSelector" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hQQ-K5-RYs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qnr-VM-G4P">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qnr-VM-G4P" id="qdr-nu-gJt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="taZ-uj-jve" id="d1m-RL-Grj"/>
+                            <outlet property="delegate" destination="taZ-uj-jve" id="fgj-yC-jn0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="koZ-F1-Z7t"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zoe-Nx-Dvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537" y="-845"/>
+        </scene>
         <!--Navigation Controller - Tags-->
         <scene sceneID="7ts-dW-cgC">
             <objects>
@@ -159,6 +188,7 @@
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                         <segue destination="5u5-bZ-Tef" kind="relationship" relationship="viewControllers" id="K49-pu-TG6"/>
+                        <segue destination="taZ-uj-jve" kind="relationship" relationship="viewControllers" id="uXX-QO-gw7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
