@@ -23,6 +23,9 @@
 		0C5C371A18D9269900A55664 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F918D9269900A55664 /* UIKit.framework */; };
 		0C5C372218D9269900A55664 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C372018D9269900A55664 /* InfoPlist.strings */; };
 		0C5C372418D9269900A55664 /* ArtemisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C372318D9269900A55664 /* ArtemisTests.m */; };
+		0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */; };
+		0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */; };
+		0C8637D718ECFE00004B344F /* TagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8637D618ECFE00004B344F /* TagViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,10 @@
 		0C5C371F18D9269900A55664 /* ArtemisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArtemisTests-Info.plist"; sourceTree = "<group>"; };
 		0C5C372118D9269900A55664 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C5C372318D9269900A55664 /* ArtemisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtemisTests.m; sourceTree = "<group>"; };
+		0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0C8637D518ECFE00004B344F /* TagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagViewController.h; sourceTree = "<group>"; };
+		0C8637D618ECFE00004B344F /* TagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */,
+				0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */,
 				0C5C36F818D9269900A55664 /* CoreGraphics.framework in Frameworks */,
 				0C5C36FA18D9269900A55664 /* UIKit.framework in Frameworks */,
 				0C5C36F618D9269900A55664 /* Foundation.framework in Frameworks */,
@@ -86,7 +95,7 @@
 		0C5C36E918D9269900A55664 = {
 			isa = PBXGroup;
 			children = (
-				0C5C36FB18D9269900A55664 /* Artemis */,
+				0C5C36FB18D9269900A55664 /* Bluetooth */,
 				0C5C371D18D9269900A55664 /* ArtemisTests */,
 				0C5C36F418D9269900A55664 /* Frameworks */,
 				0C5C36F318D9269900A55664 /* Products */,
@@ -105,6 +114,8 @@
 		0C5C36F418D9269900A55664 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */,
+				0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */,
 				0C5C36F518D9269900A55664 /* Foundation.framework */,
 				0C5C36F718D9269900A55664 /* CoreGraphics.framework */,
 				0C5C36F918D9269900A55664 /* UIKit.framework */,
@@ -113,12 +124,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0C5C36FB18D9269900A55664 /* Artemis */ = {
+		0C5C36FB18D9269900A55664 /* Bluetooth */ = {
 			isa = PBXGroup;
 			children = (
 				0C5C370418D9269900A55664 /* AppDelegate.h */,
 				0C5C370518D9269900A55664 /* AppDelegate.m */,
 				0C5C370718D9269900A55664 /* Main.storyboard */,
+				0C8637D518ECFE00004B344F /* TagViewController.h */,
+				0C8637D618ECFE00004B344F /* TagViewController.m */,
 				0C5C370A18D9269900A55664 /* FirstViewController.h */,
 				0C5C370B18D9269900A55664 /* FirstViewController.m */,
 				0C5C370D18D9269900A55664 /* SecondViewController.h */,
@@ -126,6 +139,7 @@
 				0C5C371018D9269900A55664 /* Images.xcassets */,
 				0C5C36FC18D9269900A55664 /* Supporting Files */,
 			);
+			name = Bluetooth;
 			path = Artemis;
 			sourceTree = "<group>";
 		};
@@ -262,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8637D718ECFE00004B344F /* TagViewController.m in Sources */,
 				0C5C370F18D9269900A55664 /* SecondViewController.m in Sources */,
 				0C5C370618D9269900A55664 /* AppDelegate.m in Sources */,
 				0C5C370C18D9269900A55664 /* FirstViewController.m in Sources */,
