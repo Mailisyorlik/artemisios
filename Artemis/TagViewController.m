@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    self.tags = [NSMutableArray arrayWithObjects:@"Wallet", @"Keys", nil];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -52,7 +54,7 @@
 {
 
     // Return the number of rows in the section.
-    return 1;
+    return self.tags.count;
 }
 
 
@@ -62,13 +64,34 @@
     
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: TagIdentifier];
     
-        cell.textLabel.text = @"Tag 1";
+    cell.textLabel.text = [self.tags objectAtIndex:indexPath.row];
+    
     
     
     return cell;
 }
 
+-(IBAction)addTags:(id)sender
+{
+    NSLog(@"Adding a new tag");
+    
+    UIAlertView *tagWindow = [[UIAlertView alloc] initWithTitle:@"Add a new tag"  message:@"What do you want to track?" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles: nil];
 
+    tagWindow.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    
+    [tagWindow show];
+
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    
+    [self.tags addObject: [[alertView textFieldAtIndex:0] text]];
+    [self.tableView reloadData];
+    
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

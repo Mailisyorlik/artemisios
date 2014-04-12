@@ -10,4 +10,10 @@
 
 @interface TagViewController : UITableViewController
 
+@property(strong, nonatomic) NSMutableArray *tags;
+
+-(IBAction)addTags:(id)sender;
+
+
+
 @end

@@ -29,7 +29,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tags" id="n7B-Cz-Hgu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xqm-Zw-ygI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xqm-Zw-ygI">
+                            <connections>
+                                <action selector="addTags:" destination="dwd-Hz-3RU" id="NmY-kc-mvE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
