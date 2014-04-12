@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C39090F18E3DB7300D2522E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C370518D9269900A55664 /* AppDelegate.m */; };
+		0C4C3B9518F8B03C009971F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C3B9418F8B03C009971F1 /* MapViewController.m */; };
+		0C4C3B9818F8B35E009971F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4C3B9718F8B35E009971F1 /* MapKit.framework */; };
+		0C4C3B9F18F8B9BF009971F1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C3B9E18F8B9BF009971F1 /* SettingsViewController.m */; };
 		0C5C36F618D9269900A55664 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F518D9269900A55664 /* Foundation.framework */; };
 		0C5C36F818D9269900A55664 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F718D9269900A55664 /* CoreGraphics.framework */; };
 		0C5C36FA18D9269900A55664 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F918D9269900A55664 /* UIKit.framework */; };
@@ -16,7 +18,6 @@
 		0C5C370618D9269900A55664 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C370518D9269900A55664 /* AppDelegate.m */; };
 		0C5C370918D9269900A55664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C370718D9269900A55664 /* Main.storyboard */; };
 		0C5C370C18D9269900A55664 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C370B18D9269900A55664 /* FirstViewController.m */; };
-		0C5C370F18D9269900A55664 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C370E18D9269900A55664 /* SecondViewController.m */; };
 		0C5C371118D9269900A55664 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C5C371018D9269900A55664 /* Images.xcassets */; };
 		0C5C371818D9269900A55664 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C371718D9269900A55664 /* XCTest.framework */; };
 		0C5C371918D9269900A55664 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C36F518D9269900A55664 /* Foundation.framework */; };
@@ -56,6 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C4C3B9318F8B03C009971F1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		0C4C3B9418F8B03C009971F1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		0C4C3B9718F8B35E009971F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		0C4C3B9D18F8B9BF009971F1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Artemis/SettingsViewController.h; sourceTree = "<group>"; };
+		0C4C3B9E18F8B9BF009971F1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Artemis/SettingsViewController.m; sourceTree = "<group>"; };
 		0C5C36F218D9269900A55664 /* Artemis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artemis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5C36F518D9269900A55664 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C5C36F718D9269900A55664 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,9 +75,7 @@
 		0C5C370818D9269900A55664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C5C370A18D9269900A55664 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = Artemis/FirstViewController.h; sourceTree = "<group>"; };
 		0C5C370B18D9269900A55664 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = Artemis/FirstViewController.m; sourceTree = "<group>"; };
-		0C5C370D18D9269900A55664 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = Artemis/SecondViewController.h; sourceTree = "<group>"; };
-		0C5C370E18D9269900A55664 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = Artemis/SecondViewController.m; sourceTree = "<group>"; };
-		0C5C371018D9269900A55664 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0C5C371018D9269900A55664 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Artemis/Images.xcassets; sourceTree = "<group>"; };
 		0C5C371618D9269900A55664 /* ArtemisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtemisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C5C371718D9269900A55664 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0C5C371F18D9269900A55664 /* ArtemisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArtemisTests-Info.plist"; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C4C3B9818F8B35E009971F1 /* MapKit.framework in Frameworks */,
 				0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */,
 				0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */,
 				0C5C36F818D9269900A55664 /* CoreGraphics.framework in Frameworks */,
@@ -135,15 +140,18 @@
 		0C5C36E918D9269900A55664 = {
 			isa = PBXGroup;
 			children = (
+				0C4C3B9D18F8B9BF009971F1 /* SettingsViewController.h */,
+				0C4C3B9E18F8B9BF009971F1 /* SettingsViewController.m */,
 				0C5C370418D9269900A55664 /* AppDelegate.h */,
 				0C5C370518D9269900A55664 /* AppDelegate.m */,
 				0C5C370718D9269900A55664 /* Main.storyboard */,
 				0C8637D518ECFE00004B344F /* TagViewController.h */,
 				0C8637D618ECFE00004B344F /* TagViewController.m */,
+				0C4C3B9318F8B03C009971F1 /* MapViewController.h */,
+				0C4C3B9418F8B03C009971F1 /* MapViewController.m */,
 				0C5C370A18D9269900A55664 /* FirstViewController.h */,
 				0C5C370B18D9269900A55664 /* FirstViewController.m */,
-				0C5C370D18D9269900A55664 /* SecondViewController.h */,
-				0C5C370E18D9269900A55664 /* SecondViewController.m */,
+				0C5C371018D9269900A55664 /* Images.xcassets */,
 				0C5C36FB18D9269900A55664 /* Bluetooth */,
 				0C5C371D18D9269900A55664 /* ArtemisTests */,
 				0C5C36F418D9269900A55664 /* Frameworks */,
@@ -163,6 +171,7 @@
 		0C5C36F418D9269900A55664 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C4C3B9718F8B35E009971F1 /* MapKit.framework */,
 				0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */,
 				0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */,
 				0C5C36F518D9269900A55664 /* Foundation.framework */,
@@ -189,7 +198,6 @@
 				244C36F118F4AEE200899958 /* Sensors.m */,
 				244C36F218F4AEE200899958 /* SensorTagApplicationViewController.h */,
 				244C36F318F4AEE200899958 /* SensorTagApplicationViewController.m */,
-				0C5C371018D9269900A55664 /* Images.xcassets */,
 				0C5C36FC18D9269900A55664 /* Supporting Files */,
 			);
 			name = Bluetooth;
@@ -364,8 +372,9 @@
 				244C36F918F4AEE200899958 /* SensorTagApplicationViewController.m in Sources */,
 				0C8637D718ECFE00004B344F /* TagViewController.m in Sources */,
 				244C36F818F4AEE200899958 /* Sensors.m in Sources */,
+				0C4C3B9F18F8B9BF009971F1 /* SettingsViewController.m in Sources */,
+				0C4C3B9518F8B03C009971F1 /* MapViewController.m in Sources */,
 				244C36F518F4AEE200899958 /* BLEUtility.m in Sources */,
-				0C5C370F18D9269900A55664 /* SecondViewController.m in Sources */,
 				244C36F618F4AEE200899958 /* deviceCellTemplate.m in Sources */,
 				0C5C370618D9269900A55664 /* AppDelegate.m in Sources */,
 				244C36F418F4AEE200899958 /* BLEDevice.m in Sources */,
@@ -379,7 +388,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C39090F18E3DB7300D2522E /* AppDelegate.m in Sources */,
 				0C5C372418D9269900A55664 /* ArtemisTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
