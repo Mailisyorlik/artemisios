@@ -30,7 +30,7 @@
     self.tags = [NSMutableArray arrayWithObjects:@"Wallet", @"Keys", nil];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
+        
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
