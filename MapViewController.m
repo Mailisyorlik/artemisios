@@ -37,6 +37,7 @@
     [annotation setCoordinate:coord];
     [annotation setTitle:@"Last Seen Location"];
     [self.mapView addAnnotation:annotation];
+    //within the above lines, the code for lat long may have to be changed to drop the pin at the lat long location of the phone when the tag leaves range
     
     
 }

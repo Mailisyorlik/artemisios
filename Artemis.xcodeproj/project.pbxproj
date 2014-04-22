@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C2B90F01906F37700324ED5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2B90EF1906F37700324ED5 /* CoreLocation.framework */; };
 		0C4C3B9518F8B03C009971F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C3B9418F8B03C009971F1 /* MapViewController.m */; };
 		0C4C3B9818F8B35E009971F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4C3B9718F8B35E009971F1 /* MapKit.framework */; };
 		0C4C3B9F18F8B9BF009971F1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C3B9E18F8B9BF009971F1 /* SettingsViewController.m */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C2B90EF1906F37700324ED5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0C4C3B9318F8B03C009971F1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		0C4C3B9418F8B03C009971F1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0C4C3B9718F8B35E009971F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2B90F01906F37700324ED5 /* CoreLocation.framework in Frameworks */,
 				0C4C3B9818F8B35E009971F1 /* MapKit.framework in Frameworks */,
 				0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */,
 				0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */,
@@ -171,6 +174,7 @@
 		0C5C36F418D9269900A55664 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C2B90EF1906F37700324ED5 /* CoreLocation.framework */,
 				0C4C3B9718F8B35E009971F1 /* MapKit.framework */,
 				0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */,
 				0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */,
