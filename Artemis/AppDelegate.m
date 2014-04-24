@@ -11,10 +11,16 @@
     
 #import "AppDelegate.h"
 #import "deviceSelector.h"
+#import <Parse/Parse.h>
+
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"v0IIwf9rFyBBVieEApsGCmJxaS2ZR9mkBthUBzuZ"
+                  clientKey:@"pSPNXRXYAsojBxiseKhvvcnDGemRCyNUBtLEZla7"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
        return YES;
 }
