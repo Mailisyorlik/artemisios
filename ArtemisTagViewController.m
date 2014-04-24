@@ -104,13 +104,13 @@
             // Remove the row from data model
             PFObject *object = [self.objects objectAtIndex:indexPath.row];
             [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                [self refreshTable nil];
+                
             }];
-        }
+        }}
         
-        
-        
-- (void)viewDidLoad
+}
+
+-(void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
