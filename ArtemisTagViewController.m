@@ -98,9 +98,9 @@
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    
+    if (editingStyle ==  UITableViewCellEditingStyleDelete) {
         //add code here for when you hit delete
-        {
             // Remove the row from data model
             PFObject *object = [self.objects objectAtIndex:indexPath.row];
             [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
