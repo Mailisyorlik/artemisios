@@ -50,15 +50,29 @@
     [tagWindow show];
     
     
+
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
     
-    PFObject *Tag = [PFObject objectWithClassName:@"Tag"];
-    Tag[@"Name"] = [[alertView textFieldAtIndex:0] text];
-    [Tag saveInBackground];
+    PFObject *newTag = [PFObject objectWithClassName:@"Tag"];
+    newTag[@"Name"] = [[alertView textFieldAtIndex:0] text];
+
+    newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    
+    
+    
+    
+    
+    
+    
+    [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self loadObjects];
+        
+    }];
+    
     
     
 }
