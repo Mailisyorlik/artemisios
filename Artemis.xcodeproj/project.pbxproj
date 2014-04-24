@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C2B90F01906F37700324ED5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2B90EF1906F37700324ED5 /* CoreLocation.framework */; };
+		0C2D3CFA1909D00400EEA5D2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2D3CF91909D00400EEA5D2 /* FacebookSDK.framework */; };
 		0C4C3B9518F8B03C009971F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C3B9418F8B03C009971F1 /* MapViewController.m */; };
 		0C4C3B9818F8B35E009971F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4C3B9718F8B35E009971F1 /* MapKit.framework */; };
 		0C4C3B9F18F8B9BF009971F1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C3B9E18F8B9BF009971F1 /* SettingsViewController.m */; };
@@ -39,7 +40,6 @@
 		0CCD39B01908869E0069665A /* ArtemisTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCD39AF1908869E0069665A /* ArtemisTagViewController.m */; };
 		0CCD39B3190896B00069665A /* ArtemisLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCD39B2190896B00069665A /* ArtemisLoginController.m */; };
 		0CCD39B6190896D10069665A /* ArtemisSignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCD39B5190896D10069665A /* ArtemisSignUpController.m */; };
-		0CCD39B8190899600069665A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39B7190899600069665A /* FacebookSDK.framework */; };
 		0CCD39BA19089A070069665A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39B919089A070069665A /* Social.framework */; };
 		244C36F418F4AEE200899958 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36E918F4AEE200899958 /* BLEDevice.m */; };
 		244C36F518F4AEE200899958 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36EB18F4AEE200899958 /* BLEUtility.m */; };
@@ -72,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		0C2B90EF1906F37700324ED5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0C2D3CF91909D00400EEA5D2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		0C4C3B9318F8B03C009971F1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; usesTabs = 0; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		0C4C3B9418F8B03C009971F1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		0C4C3B9718F8B35E009971F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -113,7 +114,6 @@
 		0CCD39B2190896B00069665A /* ArtemisLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtemisLoginController.m; sourceTree = "<group>"; };
 		0CCD39B4190896D10069665A /* ArtemisSignUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtemisSignUpController.h; sourceTree = "<group>"; };
 		0CCD39B5190896D10069665A /* ArtemisSignUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtemisSignUpController.m; sourceTree = "<group>"; };
-		0CCD39B7190899600069665A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../Downloads/ParsePlatform-LoginAndSignUpTutorial-0710943/FacebookSDK.framework"; sourceTree = "<group>"; };
 		0CCD39B919089A070069665A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		244C36E818F4AEE200899958 /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDevice.h; sourceTree = "<group>"; };
 		244C36E918F4AEE200899958 /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDevice.m; sourceTree = "<group>"; };
@@ -150,11 +150,11 @@
 				0CCD39AB1908849B0069665A /* StoreKit.framework in Frameworks */,
 				0CCD39A91908848F0069665A /* Security.framework in Frameworks */,
 				0CCD39A7190884850069665A /* QuartzCore.framework in Frameworks */,
+				0C2D3CFA1909D00400EEA5D2 /* FacebookSDK.framework in Frameworks */,
 				0CCD39A51908847B0069665A /* MobileCoreServices.framework in Frameworks */,
 				0CCD39A31908846F0069665A /* libz.dylib in Frameworks */,
 				0C2B90F01906F37700324ED5 /* CoreLocation.framework in Frameworks */,
 				0C5C36F818D9269900A55664 /* CoreGraphics.framework in Frameworks */,
-				0CCD39B8190899600069665A /* FacebookSDK.framework in Frameworks */,
 				0CCD39A11908844B0069665A /* CFNetwork.framework in Frameworks */,
 				0CCD399F190884360069665A /* AudioToolbox.framework in Frameworks */,
 				0C4C3B9818F8B35E009971F1 /* MapKit.framework in Frameworks */,
@@ -182,7 +182,7 @@
 		0C5C36E918D9269900A55664 = {
 			isa = PBXGroup;
 			children = (
-				0CCD39B7190899600069665A /* FacebookSDK.framework */,
+				0C2D3CF91909D00400EEA5D2 /* FacebookSDK.framework */,
 				0CCD39AE1908869E0069665A /* ArtemisTagViewController.h */,
 				0CCD39AF1908869E0069665A /* ArtemisTagViewController.m */,
 				0CCD399C190883F60069665A /* Parse.framework */,
