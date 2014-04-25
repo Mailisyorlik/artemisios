@@ -9,6 +9,8 @@
 #import "ArtemisTagViewController.h"
 #import "ArtemisLoginController.h"
 #import "ArtemisSignUpController.h"
+#import "BluetoothFinderTableViewController.h"
+
 @interface ArtemisTagViewController ()
 
 @end
@@ -40,14 +42,11 @@
 }
 -(IBAction)addTags:(id)sender
 {
-    NSLog(@"Adding a new tag");
+
     
-    UIAlertView *tagWindow = [[UIAlertView alloc] initWithTitle:@"Add a new tag"  message:@"What do you want to track?" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles: nil];
+                                                           
+    [self performSegueWithIdentifier:@"BLESegue" sender:nil];
     
-    tagWindow.alertViewStyle = UIAlertViewStylePlainTextInput;
-    
-    
-    [tagWindow show];
     
     
 

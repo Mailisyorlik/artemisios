@@ -28,6 +28,8 @@
 		0C5C372418D9269900A55664 /* ArtemisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5C372318D9269900A55664 /* ArtemisTests.m */; };
 		0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */; };
 		0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */; };
+		0C9FCA4E1909DEA300DB3012 /* BluetoothFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA4D1909DEA300DB3012 /* BluetoothFinderTableViewController.m */; };
+		0C9FCA511909DEF000DB3012 /* NewTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA501909DEF000DB3012 /* NewTagViewController.m */; };
 		0CCD399D190883F60069665A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD399C190883F60069665A /* Parse.framework */; };
 		0CCD399F190884360069665A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD399E190884360069665A /* AudioToolbox.framework */; };
 		0CCD39A11908844B0069665A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39A01908844B0069665A /* CFNetwork.framework */; };
@@ -99,6 +101,10 @@
 		0C5C372318D9269900A55664 /* ArtemisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtemisTests.m; sourceTree = "<group>"; };
 		0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0C9FCA4C1909DEA300DB3012 /* BluetoothFinderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothFinderTableViewController.h; sourceTree = "<group>"; };
+		0C9FCA4D1909DEA300DB3012 /* BluetoothFinderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothFinderTableViewController.m; sourceTree = "<group>"; };
+		0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTagViewController.h; sourceTree = "<group>"; };
+		0C9FCA501909DEF000DB3012 /* NewTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTagViewController.m; sourceTree = "<group>"; };
 		0CCD399C190883F60069665A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0CCD399E190884360069665A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0CCD39A01908844B0069665A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -191,6 +197,10 @@
 				0C5C370418D9269900A55664 /* AppDelegate.h */,
 				0C5C370518D9269900A55664 /* AppDelegate.m */,
 				0C5C370718D9269900A55664 /* Main.storyboard */,
+				0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */,
+				0C9FCA501909DEF000DB3012 /* NewTagViewController.m */,
+				0C9FCA4C1909DEA300DB3012 /* BluetoothFinderTableViewController.h */,
+				0C9FCA4D1909DEA300DB3012 /* BluetoothFinderTableViewController.m */,
 				0CCD39B1190896B00069665A /* ArtemisLoginController.h */,
 				0CCD39B2190896B00069665A /* ArtemisLoginController.m */,
 				0CCD39B4190896D10069665A /* ArtemisSignUpController.h */,
@@ -429,9 +439,11 @@
 			files = (
 				244C36F918F4AEE200899958 /* SensorTagApplicationViewController.m in Sources */,
 				0CCD39B6190896D10069665A /* ArtemisSignUpController.m in Sources */,
+				0C9FCA4E1909DEA300DB3012 /* BluetoothFinderTableViewController.m in Sources */,
 				244C36F818F4AEE200899958 /* Sensors.m in Sources */,
 				0CCD39B3190896B00069665A /* ArtemisLoginController.m in Sources */,
 				0C4C3B9F18F8B9BF009971F1 /* SettingsViewController.m in Sources */,
+				0C9FCA511909DEF000DB3012 /* NewTagViewController.m in Sources */,
 				0C4C3B9518F8B03C009971F1 /* MapViewController.m in Sources */,
 				244C36F518F4AEE200899958 /* BLEUtility.m in Sources */,
 				244C36F618F4AEE200899958 /* deviceCellTemplate.m in Sources */,
