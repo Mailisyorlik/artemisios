@@ -8,6 +8,7 @@
 
 #import "NewTagViewController.h"
 
+
 @interface NewTagViewController ()
 
 @end
@@ -25,8 +26,15 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    PFObject *newTag = [PFObject objectWithClassName:@"newTag"];
+    newTag [@"name"] = @"dog";
+    newTag [@"UUID"] = @"UUID";
+    [newTag saveInBackground];
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
