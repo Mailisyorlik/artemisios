@@ -15,6 +15,8 @@
 
 @implementation NewTagViewController
 
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -26,14 +28,10 @@
 
 - (void)viewDidLoad
 
-+ (BOOL)save(id)
 
-- (IBAction)save:(id)sender {
-    [PFUser saveAll:(PFObject)];
-    [PFQuery clearAllCachedResults];
-    
-    [self.tabBarController setSelectedIndex:0];
 
+(void)NewTagViewController:(PFNewTagViewController *)NewTagController didSaveObject:(PFObject *)user {
+    [self dismissViewControllerAnimated: YES completion:NULL];
     
 }
     
