@@ -25,17 +25,20 @@
 }
 
 - (void)viewDidLoad
-{
 
-    PFObject *newTag = [PFObject objectWithClassName:@"newTag"];
-    newTag [@"name"] = @"dog";
-    newTag [@"UUID"] = @"UUID";
-    [newTag saveInBackground];
++ (BOOL)save(id)
+
+- (IBAction)save:(id)sender {
+    [PFUser saveAll:(PFObject)];
+    [PFQuery clearAllCachedResults];
     
-    
-    
+    [self.tabBarController setSelectedIndex:0];
+
     
 }
+    
+    
+
 
 - (void)didReceiveMemoryWarning
 {
