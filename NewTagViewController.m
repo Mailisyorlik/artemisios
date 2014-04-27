@@ -10,10 +10,12 @@
 
 
 @interface NewTagViewController ()
+@property NSString *tagName;
 
 @end
 
 @implementation NewTagViewController
+
 
 
 
@@ -27,6 +29,14 @@
 }
 
 - (void)viewDidLoad
+
+- (IBAction)save:(id)sender {
+    // Create PFObject with tag information
+    PFObject *tag = [PFObject objectWithClassName:@"TagName"];
+    
+    
+    NSArray *ingredients = [NewTagViewController.text componentsSeparatedByString: @","];
+    [tag setObject:name forKey:@"tag"];
 
 
 
