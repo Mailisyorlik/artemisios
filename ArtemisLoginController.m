@@ -26,8 +26,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"looksieLogo.png"]]];
+    [self.logInView.usernameField setBackgroundColor:[UIColor whiteColor]];
+    [self.logInView.passwordField setBackgroundColor:[UIColor whiteColor]];
+    [self.logInView.usernameField setTextColor:[UIColor colorWithRed:0.200 green:0.200 blue:0.200 alpha:1.]];
+    [self.logInView.passwordField setTextColor:[UIColor colorWithRed:0.200 green:0.200 blue:0.200 alpha:1.]];
+    [self.logInView.usernameField setBorderStyle:UITextBorderStyleRoundedRect];
+    [self.logInView.passwordField setBorderStyle:UITextBorderStyleRoundedRect];
+    [self.logInView setBackgroundColor:[UIColor colorWithRed:0.100 green:0.280 blue:0.400 alpha:1.]];
+    
+    
 }
+
 
 - (void)didReceiveMemoryWarning
 {
