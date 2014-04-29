@@ -96,16 +96,22 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJd-Zd-0MP">
-                                <rect key="frame" x="138" y="384" width="46" height="30"/>
+                                <rect key="frame" x="137" y="232" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveTag:" destination="bir-Fi-GdT" eventType="touchUpInside" id="C2y-Db-WpP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="SYW-k3-B4G"/>
+                    <connections>
+                        <outlet property="tagName" destination="sme-oB-imT" id="vmL-BO-Lz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lda-ic-8cm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

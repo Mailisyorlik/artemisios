@@ -10,5 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface NewTagViewController : UIViewController
-@property (nonatomic, retain) IBOutlet UITextField *myTextField;
+@property (nonatomic, retain) IBOutlet UITextField *tagName;
+-(IBAction)saveTag:(id)sender;
+
 @end

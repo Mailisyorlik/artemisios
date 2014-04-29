@@ -10,7 +10,7 @@
 
 
 @interface NewTagViewController ()
-@property NSString *tagName;
+
 
 @end
 
@@ -29,20 +29,30 @@
 }
 
 - (void)viewDidLoad
-
-- (IBAction)save:(id)sender {
-    // Create PFObject with tag information
-    PFObject *tag = [PFObject objectWithClassName:@"TagName"];
+{
+    [super viewDidLoad];
     
     
-    NSArray *ingredients = [NewTagViewController.text componentsSeparatedByString: @","];
-    [tag setObject:name forKey:@"tag"];
+}
 
 
 
-(void)NewTagViewController:(PFNewTagViewController *)NewTagController didSaveObject:(PFObject *)user {
-    [self dismissViewControllerAnimated: YES completion:NULL];
+
+
+- (IBAction)saveTag:(id)sender
+{
+    PFObject *newTag = [PFObject objectWithClassName:@"Tag"];
+    newTag[@"Name"] = self.tagName.text;
+    newTag[@"UUID"] = @"something";
     
+    
+    newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }];
+    
+
+
 }
     
     

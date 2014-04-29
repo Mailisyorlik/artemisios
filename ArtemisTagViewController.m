@@ -52,29 +52,11 @@
 
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
-    
-    PFObject *newTag = [PFObject objectWithClassName:@"Tag"];
-    newTag[@"Name"] = [[alertView textFieldAtIndex:0] text];
 
-    newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
     
     
     
-    
-    
-    
-    
-    [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        [self loadObjects];
-        
-    }];
-    
-    
-    
-}
+
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -88,10 +70,24 @@
         
         [self presentViewController:logInViewController animated:NO completion:NULL];
         
+    
+    }
+    else {
+        
+        [self loadObjects];
+        
+        
+        
         
     }
-    
 }
+
+
+
+
+
+
+
 -(void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
 [self dismissViewControllerAnimated: YES completion:NULL];
 }
