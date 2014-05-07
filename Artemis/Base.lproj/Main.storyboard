@@ -38,11 +38,42 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="WdQ-Wk-wp5" kind="push" identifier="BLESegue" id="8CW-FA-bRc"/>
+                        <segue destination="jdw-wb-4Lj" kind="push" identifier="TagDetailSegue" id="Bxh-Eh-hS5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA9-g3-c41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165" y="-1281"/>
+        </scene>
+        <!--Tag Detail View Controller - Details-->
+        <scene sceneID="iyy-MQ-hET">
+            <objects>
+                <viewController title="Details" id="jdw-wb-4Lj" customClass="TagDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="al4-5l-3dy"/>
+                        <viewControllerLayoutGuide type="bottom" id="jmq-Wx-a19"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ecw-RR-oQF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD3-qi-bLC">
+                                <rect key="frame" x="20" y="73" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5As-fc-PYY"/>
+                    <connections>
+                        <outlet property="tagname" destination="fD3-qi-bLC" id="vEL-m8-zxt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZB-eI-Kku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="-938"/>
         </scene>
         <!--Bluetooth Finder Table View Controller - Available Tags-->
         <scene sceneID="sEb-93-i7T">
@@ -75,7 +106,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCY-Rk-hDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1755" y="-1281"/>
+            <point key="canvasLocation" x="1747" y="-1645"/>
         </scene>
         <!--New Tag View Controller-->
         <scene sceneID="3D4-De-Z1W">

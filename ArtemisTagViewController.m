@@ -10,6 +10,7 @@
 #import "ArtemisLoginController.h"
 #import "ArtemisSignUpController.h"
 #import "BluetoothFinderTableViewController.h"
+#import "TagDetailViewController.h"
 
 @interface ArtemisTagViewController ()
 
@@ -94,7 +95,11 @@
 
 
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [self performSegueWithIdentifier:@"TagDetailSegue" sender:nil];
+}
 
 
 // Override to support conditional editing of the table view.
@@ -120,8 +125,20 @@
 
 }
 
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"TagDetailSegue"]) {
+        // Row selection
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PFObject *object = [self.objects objectAtIndex:indexPath.row];
+        TagDetailViewController *controller = (TagDetailViewController*)[segue destinationViewController];
+        [controller setTagDetail: object];
         
-        
+    }
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
