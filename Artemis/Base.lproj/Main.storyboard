@@ -95,11 +95,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="immediate.png" translatesAutoresizingMaskIntoConstraints="NO" id="3zJ-RN-axe">
+                                <rect key="frame" x="74" y="139" width="172" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="near.png" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-aa-iAB">
+                                <rect key="frame" x="97" y="171" width="127" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="far.png" translatesAutoresizingMaskIntoConstraints="NO" id="1DB-5w-7QW">
+                                <rect key="frame" x="120" y="202" width="81" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.11735664993087469" green="0.45496098128561391" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="5As-fc-PYY"/>
                     <connections>
+                        <outlet property="far" destination="1DB-5w-7QW" id="3VB-bI-g1P"/>
+                        <outlet property="immediate" destination="3zJ-RN-axe" id="wo3-Dn-jRD"/>
+                        <outlet property="near" destination="uJO-aa-iAB" id="AVo-lR-3dn"/>
                         <outlet property="tagname" destination="fD3-qi-bLC" id="vEL-m8-zxt"/>
                     </connections>
                 </viewController>
@@ -168,10 +183,6 @@
                                     <action selector="saveTag:" destination="bir-Fi-GdT" eventType="touchUpInside" id="C2y-Db-WpP"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0n-ON-1b9">
-                                <rect key="frame" x="0.0" y="162" width="320" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -308,6 +319,9 @@
         <image name="15-tags" width="24" height="25"/>
         <image name="19-gear" width="26" height="26"/>
         <image name="Map" width="26" height="21"/>
+        <image name="far.png" width="162" height="117"/>
+        <image name="immediate.png" width="344" height="244"/>
+        <image name="near.png" width="254" height="180"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

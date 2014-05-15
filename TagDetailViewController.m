@@ -29,6 +29,33 @@
     self.tagname.text = [self.TagDetail objectForKey:@"Name"];
     self.title = [self.TagDetail objectForKey:@"Name"];
     
+    NSString *distance = @"near";
+   
+    
+    if ([distance isEqualToString:@"near"]) {
+        [self.near setHidden:(NO)];
+        [self.far setHidden:(YES)];
+        [self.immediate setHidden:(YES)];
+        
+    
+    }
+    else if ([distance isEqualToString:@"far"]) {
+       
+        [self.near setHidden:(YES)];
+        [self.far setHidden:(NO)];
+        [self.immediate setHidden:(YES)];
+        
+    }
+    else if ([distance isEqualToString:@"immediate"]) {
+       
+        [self.near setHidden: (YES)];
+        [self.far setHidden: (YES)];
+        [self.immediate setHidden: (NO)];
+        
+    }
+    
+        
+    
     
     
 }

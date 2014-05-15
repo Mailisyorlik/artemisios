@@ -12,4 +12,8 @@
 @interface TagDetailViewController : UIViewController
 @property (nonatomic, strong) PFObject* TagDetail;
 @property (strong, nonatomic)IBOutlet UILabel *tagname;
+@property (nonatomic, strong)IBOutlet UIImageView *immediate;
+@property (nonatomic, strong)IBOutlet UIImageView *near;
+@property (nonatomic, strong)IBOutlet UIImageView *far;
+
 @end
