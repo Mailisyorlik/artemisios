@@ -22,6 +22,10 @@
                   clientKey:@"pSPNXRXYAsojBxiseKhvvcnDGemRCyNUBtLEZla7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    
+    
        return YES;
 }
 

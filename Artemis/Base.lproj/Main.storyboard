@@ -39,13 +39,13 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="WdQ-Wk-wp5" kind="push" identifier="BLESegue" id="8CW-FA-bRc"/>
                         <segue destination="jdw-wb-4Lj" kind="push" identifier="TagDetailSegue" id="Bxh-Eh-hS5"/>
+                        <segue destination="2Gd-nH-288" kind="push" identifier="BLESegue" id="ldt-e2-Z72"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uA9-g3-c41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1165" y="-1281"/>
+            <point key="canvasLocation" x="1167" y="-1329"/>
         </scene>
         <!--Tag Detail View Controller - Details-->
         <scene sceneID="iyy-MQ-hET">
@@ -122,38 +122,27 @@
             </objects>
             <point key="canvasLocation" x="1745" y="-938"/>
         </scene>
-        <!--Bluetooth Finder Table View Controller - Available Tags-->
-        <scene sceneID="sEb-93-i7T">
+        <!--Bluetooth Finder View Controller - Add new tag-->
+        <scene sceneID="0oz-JQ-UzZ">
             <objects>
-                <tableViewController id="WdQ-Wk-wp5" customClass="BluetoothFinderTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XOw-Y0-12E">
+                <viewController id="2Gd-nH-288" customClass="BluetoothFinderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pj1-H0-j56"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ac-4j-cZw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NZw-hM-a8j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BLEcell" id="HlF-kQ-M3b">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HlF-kQ-M3b" id="xSH-eH-f4n">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="WdQ-Wk-wp5" id="jJJ-GK-kNd"/>
-                            <outlet property="delegate" destination="WdQ-Wk-wp5" id="mbB-Q9-OYz"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Available Tags" id="wwN-nz-HiF"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add new tag" id="Kx2-QG-pFI"/>
                     <connections>
-                        <segue destination="bir-Fi-GdT" kind="push" identifier="SelectedTagSegue" id="ko1-kA-tZI"/>
+                        <segue destination="bir-Fi-GdT" kind="push" identifier="SelectedTagSegue" id="YOU-OF-hkr"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UCY-Rk-hDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfV-7F-B7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1747" y="-1645"/>
+            <point key="canvasLocation" x="1745" y="-1597"/>
         </scene>
         <!--New Tag View Controller-->
         <scene sceneID="3D4-De-Z1W">

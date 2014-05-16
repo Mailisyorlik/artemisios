@@ -29,7 +29,7 @@
 		0C75B95D1919BCAC000BF2F8 /* TagDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C75B95C1919BCAC000BF2F8 /* TagDetailViewController.m */; };
 		0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */; };
 		0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */; };
-		0C9FCA4E1909DEA300DB3012 /* BluetoothFinderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA4D1909DEA300DB3012 /* BluetoothFinderTableViewController.m */; };
+		0C9FCA4E1909DEA300DB3012 /* BluetoothFinderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA4D1909DEA300DB3012 /* BluetoothFinderViewController.m */; };
 		0C9FCA511909DEF000DB3012 /* NewTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FCA501909DEF000DB3012 /* NewTagViewController.m */; };
 		0CC5483C1924508100434E4E /* far.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CC548391924508100434E4E /* far.png */; };
 		0CC5483D1924508100434E4E /* immediate.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CC5483A1924508100434E4E /* immediate.png */; };
@@ -107,8 +107,8 @@
 		0C75B95C1919BCAC000BF2F8 /* TagDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagDetailViewController.m; sourceTree = "<group>"; };
 		0C79CE2118F4ADCF007C9B33 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		0C9FCA4C1909DEA300DB3012 /* BluetoothFinderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothFinderTableViewController.h; sourceTree = "<group>"; };
-		0C9FCA4D1909DEA300DB3012 /* BluetoothFinderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothFinderTableViewController.m; sourceTree = "<group>"; };
+		0C9FCA4C1909DEA300DB3012 /* BluetoothFinderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothFinderViewController.h; sourceTree = "<group>"; };
+		0C9FCA4D1909DEA300DB3012 /* BluetoothFinderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothFinderViewController.m; sourceTree = "<group>"; };
 		0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTagViewController.h; sourceTree = "<group>"; };
 		0C9FCA501909DEF000DB3012 /* NewTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTagViewController.m; sourceTree = "<group>"; };
 		0CC548391924508100434E4E /* far.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = far.png; sourceTree = "<group>"; };
@@ -213,8 +213,8 @@
 				0C75B95C1919BCAC000BF2F8 /* TagDetailViewController.m */,
 				0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */,
 				0C9FCA501909DEF000DB3012 /* NewTagViewController.m */,
-				0C9FCA4C1909DEA300DB3012 /* BluetoothFinderTableViewController.h */,
-				0C9FCA4D1909DEA300DB3012 /* BluetoothFinderTableViewController.m */,
+				0C9FCA4C1909DEA300DB3012 /* BluetoothFinderViewController.h */,
+				0C9FCA4D1909DEA300DB3012 /* BluetoothFinderViewController.m */,
 				0CCD39B1190896B00069665A /* ArtemisLoginController.h */,
 				0CCD39B2190896B00069665A /* ArtemisLoginController.m */,
 				0CCD39B4190896D10069665A /* ArtemisSignUpController.h */,
@@ -457,7 +457,7 @@
 				244C36F918F4AEE200899958 /* SensorTagApplicationViewController.m in Sources */,
 				0C75B95D1919BCAC000BF2F8 /* TagDetailViewController.m in Sources */,
 				0CCD39B6190896D10069665A /* ArtemisSignUpController.m in Sources */,
-				0C9FCA4E1909DEA300DB3012 /* BluetoothFinderTableViewController.m in Sources */,
+				0C9FCA4E1909DEA300DB3012 /* BluetoothFinderViewController.m in Sources */,
 				244C36F818F4AEE200899958 /* Sensors.m in Sources */,
 				0CCD39B3190896B00069665A /* ArtemisLoginController.m in Sources */,
 				0C4C3B9F18F8B9BF009971F1 /* SettingsViewController.m in Sources */,

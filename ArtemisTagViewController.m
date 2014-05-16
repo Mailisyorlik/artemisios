@@ -9,7 +9,7 @@
 #import "ArtemisTagViewController.h"
 #import "ArtemisLoginController.h"
 #import "ArtemisSignUpController.h"
-#import "BluetoothFinderTableViewController.h"
+#import "BluetoothFinderViewController.h"
 #import "TagDetailViewController.h"
 
 @interface ArtemisTagViewController ()

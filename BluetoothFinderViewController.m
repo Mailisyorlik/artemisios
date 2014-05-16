@@ -6,17 +6,19 @@
 //  Copyright (c) 2014 artemis. All rights reserved.
 //
 
-#import "BluetoothFinderTableViewController.h"
+#import "BluetoothFinderViewController.h"
 #import "NewTagViewController.h"
-@interface BluetoothFinderTableViewController ()
+#import "AppDelegate.h"
+
+@interface BluetoothFinderViewController ()
 
 @end
 
-@implementation BluetoothFinderTableViewController
+@implementation BluetoothFinderViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -27,11 +29,34 @@
 {
     [super viewDidLoad];
 
-    self.tags = [[NSMutableArray alloc] initWithObjects:@"Artemis 1", @"Artemis 2", nil];
+    self.tags = [[NSMutableDictionary alloc] init];
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager setDelegate:self];
+    
+    self.artemisUUID = [[NSUUID alloc] initWithUUIDString: @"A2F065FF-426E-4043-B45C-861F801BAE2D"];
+    
+    self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID identifier:self.artemisUUID.UUIDString];
+    
+    
     
     
     
 }
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
+    
+    
+}
+-(void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear: animated];
+    [self.locationManager stopRangingBeaconsInRegion: self.rangedRegion];
+    
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -39,45 +64,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
 
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-
-    // Return the number of rows in the section.
-    return self.tags.count;
     
-    
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"BLEcell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] init];
-        
-    }
-    
-    cell.textLabel.text = [self.tags objectAtIndex:indexPath.row];
-    
-    
-    return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    [self performSegueWithIdentifier:@"SelectedTagSegue" sender:[self.tags objectAtIndex:indexPath.row]];
+   // [self performSegueWithIdentifier:@"SelectedTagSegue" sender:[self.tags objectAtIndex:indexPath.row]];
 
     
     
@@ -85,7 +75,7 @@
     
 
 
-}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -124,7 +114,13 @@
     return YES;
 }
 */
+#pragma mark - Location manager delegate
 
+-(void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:
+(CLBeaconRegion *)region
+{
+    
+}
 
 #pragma mark - Navigation
 
