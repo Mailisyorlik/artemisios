@@ -119,7 +119,14 @@
 -(void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:
 (CLBeaconRegion *)region
 {
-    
+    for(CLBeacon *beacon in beacons)
+    {
+        if(beacon.proximity == CLProximityImmediate)
+        {
+            NSLog(@"ADD THIS TAG");
+            [self performSegueWithIdentifier:@"SelectedTagSegue" sender:beacon];
+        }
+    }
 }
 
 #pragma mark - Navigation
@@ -130,7 +137,7 @@
     if ([segue.identifier isEqualToString:@"SelectedTagSegue"]){
         
         NewTagViewController *controller = (NewTagViewController*)[segue destinationViewController];
-        controller.title = sender;
+        controller.selectedBeacon = sender;
         
     }
     

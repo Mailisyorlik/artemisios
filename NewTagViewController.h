@@ -13,4 +13,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *tagName;
 -(IBAction)saveTag:(id)sender;
 
+@property CLBeacon *selectedBeacon;
+
 @end
