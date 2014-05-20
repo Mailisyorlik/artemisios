@@ -73,6 +73,9 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="QUy-BD-bpt" kind="push" id="oON-VT-r47"/>
+                                </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fUx-R8-qHE">
                                 <rect key="frame" x="37" y="300" width="51" height="31"/>
@@ -115,12 +118,13 @@
                         <outlet property="far" destination="1DB-5w-7QW" id="3VB-bI-g1P"/>
                         <outlet property="immediate" destination="3zJ-RN-axe" id="wo3-Dn-jRD"/>
                         <outlet property="near" destination="uJO-aa-iAB" id="AVo-lR-3dn"/>
+                        <outlet property="showOnMap" destination="imP-5w-b0Q" id="hyq-fw-3GW"/>
                         <outlet property="tagname" destination="fD3-qi-bLC" id="vEL-m8-zxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZB-eI-Kku" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="-938"/>
+            <point key="canvasLocation" x="1671" y="-338"/>
         </scene>
         <!--Bluetooth Finder View Controller - Add new tag-->
         <scene sceneID="0oz-JQ-UzZ">
@@ -222,6 +226,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Map" id="Z7h-1E-pvt"/>
+                    <navigationItem key="navigationItem" id="PX1-qJ-UXb"/>
                     <connections>
                         <outlet property="mapView" destination="qqM-03-F3g" id="wk3-l2-UwD"/>
                     </connections>
@@ -317,4 +322,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="oON-VT-r47"/>
+    </inferredMetricsTieBreakers>
 </document>

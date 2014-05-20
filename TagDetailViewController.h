@@ -15,5 +15,8 @@
 @property (nonatomic, strong)IBOutlet UIImageView *immediate;
 @property (nonatomic, strong)IBOutlet UIImageView *near;
 @property (nonatomic, strong)IBOutlet UIImageView *far;
+@property (nonatomic, strong)IBOutlet UIButton *showOnMap;
+
+
 
 @end
