@@ -12,6 +12,9 @@
 @interface NewTagViewController : UIViewController
 @property (nonatomic, retain) IBOutlet UITextField *tagName;
 -(IBAction)saveTag:(id)sender;
+@property (nonatomic, assign) id<UIPickerViewDataSource> datasource;
+@property (nonatomic, readonly) NSInteger numberOfComponents;
+@property (nonatomic)BOOL showSelectionIndicator;
 
 @property CLBeacon *selectedBeacon;
 

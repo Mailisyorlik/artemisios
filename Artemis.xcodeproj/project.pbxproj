@@ -109,7 +109,7 @@
 		0C79CE2318F4ADDA007C9B33 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0C9FCA4C1909DEA300DB3012 /* BluetoothFinderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothFinderViewController.h; sourceTree = "<group>"; };
 		0C9FCA4D1909DEA300DB3012 /* BluetoothFinderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothFinderViewController.m; sourceTree = "<group>"; };
-		0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTagViewController.h; sourceTree = "<group>"; };
+		0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NewTagViewController.h; sourceTree = "<group>"; };
 		0C9FCA501909DEF000DB3012 /* NewTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTagViewController.m; sourceTree = "<group>"; };
 		0CC548391924508100434E4E /* far.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = far.png; sourceTree = "<group>"; };
 		0CC5483A1924508100434E4E /* immediate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = immediate.png; sourceTree = "<group>"; };
