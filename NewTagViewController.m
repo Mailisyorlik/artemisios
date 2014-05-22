@@ -32,6 +32,8 @@
 {
     [super viewDidLoad];
     
+    self.title = self.selectedBeacon.proximityUUID.UUIDString;
+    
     
 }
 
@@ -43,7 +45,7 @@
 {
     PFObject *newTag = [PFObject objectWithClassName:@"Tag"];
     newTag[@"Name"] = self.tagName.text;
-    newTag[@"UUID"] = @"something";
+    newTag[@"UUID"] = self.selectedBeacon.proximityUUID.UUIDString;
     
     
     newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
