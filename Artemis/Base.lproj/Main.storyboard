@@ -59,12 +59,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD3-qi-bLC">
-                                <rect key="frame" x="20" y="73" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imP-5w-b0Q">
                                 <rect key="frame" x="86" y="368" width="148" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -115,11 +109,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="5As-fc-PYY"/>
                     <connections>
-                        <outlet property="far" destination="1DB-5w-7QW" id="3VB-bI-g1P"/>
-                        <outlet property="immediate" destination="3zJ-RN-axe" id="wo3-Dn-jRD"/>
-                        <outlet property="near" destination="uJO-aa-iAB" id="AVo-lR-3dn"/>
+                        <outlet property="far" destination="1DB-5w-7QW" id="LHK-8N-W67"/>
+                        <outlet property="immediate" destination="3zJ-RN-axe" id="yG5-FB-iLv"/>
+                        <outlet property="near" destination="uJO-aa-iAB" id="w8O-Gb-OQ2"/>
                         <outlet property="showOnMap" destination="imP-5w-b0Q" id="hyq-fw-3GW"/>
-                        <outlet property="tagname" destination="fD3-qi-bLC" id="vEL-m8-zxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZB-eI-Kku" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -164,7 +157,10 @@
                                 <rect key="frame" x="76" y="186" width="171" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bir-Fi-GdT" id="tz8-eZ-Sh8"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJd-Zd-0MP">
                                 <rect key="frame" x="137" y="269" width="46" height="30"/>

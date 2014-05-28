@@ -7,6 +7,7 @@
 //
 
 #import "NewTagViewController.h"
+#import "AppDelegate.h"
 
 
 @interface NewTagViewController ()
@@ -32,28 +33,63 @@
 {
     [super viewDidLoad];
     
-    self.title = self.selectedBeacon.proximityUUID.UUIDString;
+    self.title = [NSString stringWithFormat:@"Artemis Tag %@.%@", self.selectedBeacon.major, self.selectedBeacon.minor];
     
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
     
+    [self.view addGestureRecognizer:tap];
+
+    
+
 }
 
 
+-(void)dismissKeyboard {
+    [self.tagName resignFirstResponder];
+}
 
-
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+    
+}
 
 - (IBAction)saveTag:(id)sender
 {
     PFObject *newTag = [PFObject objectWithClassName:@"Tag"];
     newTag[@"Name"] = self.tagName.text;
     newTag[@"UUID"] = self.selectedBeacon.proximityUUID.UUIDString;
+    newTag[@"Major"] = self.selectedBeacon.major;
+    newTag[@"Minor"] = self.selectedBeacon.minor;
     
     
-    newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-    [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+    
+    if ( [self.tagName.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Artemis" message:@"Cannot save tag without name" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+        
+        
+    }
+    else {
+       
+        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        delegate.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        delegate.locationManager.distanceFilter = kCLDistanceFilterNone;
+        [delegate.locationManager startUpdatingLocation];
+        CLLocationCoordinate2D coordinate = [[delegate.locationManager location] coordinate];
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+        [newTag setObject:geoPoint forKey:@"LastLocation"];
+        
+        
+            newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+            [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                [self.navigationController popToRootViewControllerAnimated:YES];
     }];
     
-
+    }
 
 }
     
