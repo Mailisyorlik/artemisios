@@ -16,6 +16,10 @@
 @property (nonatomic, strong)IBOutlet UIImageView *near;
 @property (nonatomic, strong)IBOutlet UIImageView *far;
 @property (nonatomic, strong)IBOutlet UIButton *showOnMap;
+@property CLLocationManager *locationManager;
+@property CLBeaconRegion *rangedRegion;
+@property NSUUID *artemisUUID;
+
 
 
 

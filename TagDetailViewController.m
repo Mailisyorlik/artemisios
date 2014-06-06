@@ -22,6 +22,15 @@
     }
     return self;
 }
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated]
+    [[self.locationManager startRangingBeaconsInRegion: self.rangedRegion]
+]}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidAppear:animated]
+    [[self.locationManager stopRangingBeaconsInRegion: self.rangedRegion]
+]}
 
 - (void)viewDidLoad
 {
@@ -29,25 +38,27 @@
     self.tagname.text = [self.TagDetail objectForKey:@"Name"];
     self.title = [self.TagDetail objectForKey:@"Name"];
     
-    NSString *distance = @"near";
+    NSString *proximity = @"near";
    
     
-    if ([distance isEqualToString:@"near"]) {
-        [self.near setHidden:(NO)];
-        [self.far setHidden:(YES)];
-        [self.immediate setHidden:(YES)];
+    if ([beacon.proximity == CLProximityNear:]) {
+        NSLog(@"Show");
+        [[self.near setHidden:NO]
+        [[self.far setHidden: YES]
+        [[self.immediate setHidden:YES]
+        
         
     
     }
-    else if ([distance isEqualToString:@"far"]) {
-       
+    else if ([beacon.proximity == CLProximityFar]) {
+        NSLog(@"Show");
         [self.near setHidden:(YES)];
         [self.far setHidden:(NO)];
         [self.immediate setHidden:(YES)];
         
     }
-    else if ([distance isEqualToString:@"immediate"]) {
-       
+    else if ([beacon.proximity == CLProximityImmediate]) {
+        NSLog(@"Show");
         [self.near setHidden: (YES)];
         [self.far setHidden: (YES)];
         [self.immediate setHidden: (NO)];
