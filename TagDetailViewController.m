@@ -60,22 +60,22 @@
                 [self performSegueWithIdentifier:@"SelectedTagSegue" sender:beacon];
             }
         } else if(beacon.proximity == CLProximityNear) {
-            NSlog(@"Show")
-            [self.near setHidden:(NO)]
-            [self.immeditate setHidden: (YES)]
-            [self.far setHidden: (YES)]
+            NSlog(@"Show");
+            [self.near setHidden:(NO)];
+            [self.immeditate setHidden: (YES)];
+            [self.far setHidden: (YES)];
         }
     }   else if(beacon.proximity == CLProximityFar) {
-        NSlog(@"Show")
-        [self.near setHidden:(YES)]
-        [self.immediate setHidden: (YES)]
-        [self.far setHidden: (NO)]
+        NSlog(@"Show");
+        [self.near setHidden:(YES)];
+        [self.immediate setHidden: (YES)];
+        [self.far setHidden: (NO)];
     }
         else if(beacon.proximity == CLProximityImmediate) {
-        NSLog(@"Show")
-            [self.near setHidden:(YES)]
-            [self.immediate setHidden:(NO)]
-            [self.far setHidden:(YES)]
+            NSLog(@"Show");
+            [self.near setHidden:(YES)];
+            [self.immediate setHidden:(NO)];
+            [self.far setHidden:(YES)];
             
 }
 - (void)didReceiveMemoryWarning
