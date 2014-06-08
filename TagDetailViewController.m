@@ -35,42 +35,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tagname.text = [self.TagDetail objectForKey:@"Name"];
-    self.title = [self.TagDetail objectForKey:@"Name"];
     
-    NSString *proximity = @"near";
-   
+    self.tags = [[NSMutableDictionary alloc] init];
     
-    if ([beacon.proximity == CLProximityNear:]) {
-        NSLog(@"Show");
-        [[self.near setHidden:NO]
-        [[self.far setHidden: YES]
-        [[self.immediate setHidden:YES]
-        
-        
+    self.locationManager = [[CLLocationManager alloc] init];
+    [self.locationManager setDelegate:self];
     
-    }
-    else if ([beacon.proximity == CLProximityFar]) {
-        NSLog(@"Show");
-        [self.near setHidden:(YES)];
-        [self.far setHidden:(NO)];
-        [self.immediate setHidden:(YES)];
-        
-    }
-    else if ([beacon.proximity == CLProximityImmediate]) {
-        NSLog(@"Show");
-        [self.near setHidden: (YES)];
-        [self.far setHidden: (YES)];
-        [self.immediate setHidden: (NO)];
-        
-    }
+    self.artemisUUID = [[NSUUID alloc] initWithUUIDString: @"A2F065FF-426E-4043-B45C-861F801BAE2D"];
     
-        
-    
-    
+    self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID identifier:self.artemisUUID.UUIDString];
     
 }
-
+    
+        
+    
+-(void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:
+    (CLBeaconRegion *)region
+    {
+        for(CLBeacon *beacon in beacons)
+        {
+            if(beacon.proximity == CLProximityImmediate)
+            {
+                NSLog(@"Show");
+                [self performSegueWithIdentifier:@"SelectedTagSegue" sender:beacon];
+            }
+        } else if(beacon.proximity == CLProximityNear) {
+            NSlog(@"Show")
+            [self.near setHidden:(NO)]
+            [self.immeditate setHidden: (YES)]
+            [self.far setHidden: (YES)]
+        }
+    }   else if(beacon.proximity == CLProximityFar) {
+        NSlog(@"Show")
+        [self.near setHidden:(YES)]
+        [self.immediate setHidden: (YES)]
+        [self.far setHidden: (NO)]
+    }
+        else if(beacon.proximity == CLProximityImmediate) {
+        NSLog(@"Show")
+            [self.near setHidden:(YES)]
+            [self.immediate setHidden:(NO)]
+            [self.far setHidden:(YES)]
+            
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
