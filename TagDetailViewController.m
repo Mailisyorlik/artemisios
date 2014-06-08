@@ -23,14 +23,14 @@
     return self;
 }
 - (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated]
-    [[self.locationManager startRangingBeaconsInRegion: self.rangedRegion]
-]}
+    [super viewDidAppear:animated];
+    [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
+}
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidAppear:animated]
-    [[self.locationManager stopRangingBeaconsInRegion: self.rangedRegion]
-]}
+    [super viewDidAppear:animated];
+    [self.locationManager stopRangingBeaconsInRegion:self.rangedRegion];
+}
 
 - (void)viewDidLoad
 {
@@ -58,25 +58,23 @@
             {
                 NSLog(@"Show");
                 [self performSegueWithIdentifier:@"SelectedTagSegue" sender:beacon];
-            }
-        } else if(beacon.proximity == CLProximityNear) {
-            NSlog(@"Show")
-            [self.near setHidden:(NO)]
-            [self.immeditate setHidden: (YES)]
-            [self.far setHidden: (YES)]
-        }
-    }   else if(beacon.proximity == CLProximityFar) {
-        NSlog(@"Show")
-        [self.near setHidden:(YES)]
-        [self.immediate setHidden: (YES)]
-        [self.far setHidden: (NO)]
-    }
-        else if(beacon.proximity == CLProximityImmediate) {
-        NSLog(@"Show")
-            [self.near setHidden:(YES)]
-            [self.immediate setHidden:(NO)]
-            [self.far setHidden:(YES)]
-            
+            } else if(beacon.proximity == CLProximityNear) {    //END THE FIRST IF STATEMENT AND START FIRST IF ELSE
+                NSLog(@"Show");
+                [self.near setHidden:NO];       //semicolons
+                [self.immediate setHidden: YES];    //  misspelled immeiate
+                [self.far setHidden: YES];
+            } else if(beacon.proximity == CLProximityFar) { //END THE 2nd, start the 3rd
+                NSLog(@"Show");
+                [self.near setHidden:YES];
+                [self.immediate setHidden: YES];
+                [self.far setHidden: NO];
+            } else if(beacon.proximity == CLProximityImmediate) { //end the 3rd, start the 4th
+                NSLog(@"Show");
+                [self.near setHidden:YES];
+                [self.immediate setHidden:NO];
+                [self.far setHidden:YES];
+            }   //END THE 4th IF statement
+        } // END the FOR LOOP
 }
 - (void)didReceiveMemoryWarning
 {
