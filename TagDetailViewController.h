@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+@import CoreLocation;   //import CoreLocation
 
-@interface TagDetailViewController : UIViewController
+@interface TagDetailViewController : UIViewController <CLLocationManagerDelegate>   //added CLLocationmanagerDelegate
 @property (nonatomic, strong) PFObject* TagDetail;
 @property (strong, nonatomic)IBOutlet UILabel *tagname;
 @property (nonatomic, strong)IBOutlet UIImageView *immediate;
