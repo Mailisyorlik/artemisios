@@ -61,11 +61,11 @@
                 NSLog(@"Show");
                 [self performSegueWithIdentifier:@"SelectedTagSegue" sender:beacon];
             }
-        }
-      else if(beacon.proximity == CLProximityNear) {
+        
+           else if(beacon.proximity == CLProximityNear) { //End first if, start if else
                         NSLog(@"Show");
                         [self.near setHidden:NO];       //semicolons
-                        [self.immediate setHidden: YES];    //  misspelled immeiate
+                        [self.immediate setHidden: YES];    //  misspelled immediate
                         [self.far setHidden: YES];
         } else if(beacon.proximity == CLProximityFar) { //END THE 2nd, start the 3rd
                         NSLog(@"Show");
@@ -75,10 +75,13 @@
     } else if(beacon.proximity == CLProximityImmediate) { //end the 3rd, start the 4th
                         NSLog(@"Show");
                         [self.near setHidden:YES];
-                        [self.immediate setHidden:NO];s
+                        [self.immediate setHidden:NO];
                         [self.far setHidden:YES];
-                                    }   //END THE 4th IF statement
-                } // END the FOR LOOP
+        
+        
+        }  //END THE 4th IF statement
+    } // END the FOR LOOP
+    }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
