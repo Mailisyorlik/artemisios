@@ -38,7 +38,27 @@
     [annotation setTitle:@"Last Seen Location"];
     [self.mapView addAnnotation:annotation];
     
-    
+- (void)setGeoPoint:(PFGeoPoint *)geoPoint {
+        _coordinate = CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude);
+        
+        static NSDateFormatter *dateFormatter = nil;
+        if (dateFormatter == nil) {
+            dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+            [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        }
+        
+        static NSNumberFormatter *numberFormatter = nil;
+        if (numberFormatter == nil) {
+            numberFormatter = [[NSNumberFormatter alloc] init];
+            [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+            [numberFormatter setMaximumFractionDigits:3];
+        }
+        
+        _title = [dateFormatter stringFromDate:[self.object updatedAt]];
+        _subtitle = [NSString stringWithFormat:@"%@, %@", [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.latitude]],
+                     [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.longitude]]];
+    }
     
     
     

@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
  
 @property (strong, nonatomic)IBOutlet  MKMapView *mapView;
+@property PFGeoPoint *setGeoPoint;
 
 @end
