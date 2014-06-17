@@ -14,6 +14,19 @@
 @interface MapViewController : UIViewController <MKMapViewDelegate>
  
 @property (strong, nonatomic)IBOutlet  MKMapView *mapView;
-@property PFGeoPoint *setGeoPoint;
+@property (nonatomic, strong) PFObject* TagDetail;
+@property CLLocationManager *locationManager;
+
+@property CLBeaconRegion *rangedRegion;
+@property NSUUID *artemisUUID;
+@property CLBeaconMajorValue *major;
+@property CLBeaconMinorValue *minor;
+@property CLBeacon *proximity;
+@property CLBeacon *beacon;
+@property (nonatomic,strong) NSMutableDictionary *tags;
+@property CLLocationCoordinate2D *location;
+
+
+
 
 @end

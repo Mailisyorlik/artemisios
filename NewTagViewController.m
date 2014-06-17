@@ -41,7 +41,7 @@
     
     [self.view addGestureRecognizer:tap];
 
-    
+ 
 
 }
 
@@ -64,15 +64,20 @@
     newTag[@"Major"] = self.selectedBeacon.major;
     newTag[@"Minor"] = self.selectedBeacon.minor;
     
+
     
     
     if ( [self.tagName.text isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Artemis" message:@"Cannot save tag without name" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
+    
         
         
         
     }
+    
+    
+    
     else {
        
         AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];

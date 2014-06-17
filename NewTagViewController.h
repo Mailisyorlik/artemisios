@@ -16,6 +16,7 @@
 @property (nonatomic, readonly) NSInteger numberOfComponents;
 @property (nonatomic)BOOL showSelectionIndicator;
 
+
 @property CLBeacon *selectedBeacon;
 
 @end

@@ -8,11 +8,12 @@
 
 #import "MapViewController.h"
 
-@interface MapViewController ()
+@interface MapViewController()
 
 @end
 
 @implementation MapViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,31 +36,16 @@
     coord.longitude = (CLLocationDegrees)-119.813803;
     coord.latitude = (CLLocationDegrees)39.5272;
     [annotation setCoordinate:coord];
-    [annotation setTitle:@"Last Seen Location"];
+    [annotation setTitle:@""];
     [self.mapView addAnnotation:annotation];
     
-- (void)setGeoPoint:(PFGeoPoint *)geoPoint {
-        _coordinate = CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude);
+    if (_beacon.proximity == CLProximityNear) {
+        CLLocation *location = _locationManager.location;
+        CLLocationCoordinate2D coord = [location coordinate];
         
-        static NSDateFormatter *dateFormatter = nil;
-        if (dateFormatter == nil) {
-            dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-            [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-        }
+        [self.mapView addAnnotation:annotation];
         
-        static NSNumberFormatter *numberFormatter = nil;
-        if (numberFormatter == nil) {
-            numberFormatter = [[NSNumberFormatter alloc] init];
-            [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
-            [numberFormatter setMaximumFractionDigits:3];
-        }
-        
-        _title = [dateFormatter stringFromDate:[self.object updatedAt]];
-        _subtitle = [NSString stringWithFormat:@"%@, %@", [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.latitude]],
-                     [numberFormatter stringFromNumber:[NSNumber numberWithDouble:geoPoint.longitude]]];
     }
-    
     
     
     //within the above lines, the code for lat long may have to be changed to drop the pin at the lat long location of the phone when the tag leaves range
