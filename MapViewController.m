@@ -24,12 +24,18 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.mapView.delegate self];
     [self.mapView setShowsUserLocation:YES];
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    
+    
+    PFQuery *query = [PFQuery queryWithClassName: @"Tag"];
+    [query setLimit:1000];
+    [query setSkip: 1000];
     
     
     CLLocationCoordinate2D coord;
@@ -41,8 +47,12 @@
     
     if (_beacon.proximity == CLProximityNear) {
         CLLocation *location = _locationManager.location;
-        CLLocationCoordinate2D coord = [location coordinate];
+        CLLocationCoordinate2D coordinate = [location coordinate];
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                      longitude:coordinate.longitude];
         
+        
+        [annotation setTitle:@"Name"];
         [self.mapView addAnnotation:annotation];
         
     }
