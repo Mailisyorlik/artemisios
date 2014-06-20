@@ -123,6 +123,7 @@
                         <outlet property="far" destination="1DB-5w-7QW" id="LHK-8N-W67"/>
                         <outlet property="immediate" destination="3zJ-RN-axe" id="yG5-FB-iLv"/>
                         <outlet property="near" destination="uJO-aa-iAB" id="w8O-Gb-OQ2"/>
+                        <outlet property="notifyOnExitSwitch" destination="FrY-tz-apO" id="258-7B-w5e"/>
                         <outlet property="showOnMap" destination="imP-5w-b0Q" id="hyq-fw-3GW"/>
                     </connections>
                 </viewController>

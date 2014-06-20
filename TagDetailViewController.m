@@ -45,7 +45,14 @@
     
     self.artemisUUID = [[NSUUID alloc] initWithUUIDString: @"A2F065FF-426E-4043-B45C-861F801BAE2D"];
     
+    self.title = [self.TagDetail objectForKey:@"Name"];
+    
+    
+    
     self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID identifier:self.artemisUUID.UUIDString];
+    
+    self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID  major:[[self.TagDetail objectForKey:@"Major"] intValue]  minor:[[self.TagDetail objectForKey:@"@Minor"] intValue] identifier:self.artemisUUID.UUIDString];
+                                                                                                                                                        
     
 }
     
@@ -56,30 +63,36 @@
     {
         for(CLBeacon *beacon in beacons)
         {
-            if(beacon.proximity == CLProximityImmediate)
-            {
-                NSLog(@"Show");
-                [self performSegueWithIdentifier:@"SelectedTagSegue" sender:beacon];
-            }
+            
         
-           else if(beacon.proximity == CLProximityNear) { //End first if, start if else
-                        NSLog(@"Show");
+        if(beacon.proximity == CLProximityNear) { //End first if, start if else
+                        NSLog(@"Show Near");
                         [self.near setHidden:NO];       //semicolons
                         [self.immediate setHidden: YES];    //  misspelled immediate
                         [self.far setHidden: YES];
-        } else if(beacon.proximity == CLProximityFar) { //END THE 2nd, start the 3rd
-                        NSLog(@"Show");
+    } else if(beacon.proximity == CLProximityFar) { //END THE 2nd, start the 3rd
+                        NSLog(@"Show Far");
                         [self.near setHidden:YES];
                         [self.immediate setHidden: YES];
                         [self.far setHidden: NO];
     } else if(beacon.proximity == CLProximityImmediate) { //end the 3rd, start the 4th
-                        NSLog(@"Show");
+                        NSLog(@"Show Immediate");
                         [self.near setHidden:YES];
                         [self.immediate setHidden:NO];
                         [self.far setHidden:YES];
         
+    
+        
         
         }  //END THE 4th IF statement
+            
+    else {
+        [self.near setHidden:(YES)];
+        [self.immediate setHidden:(YES)];
+        [self.far setHidden:(YES)];
+        
+    }
+        
     } // END the FOR LOOP
     }
 - (void)didReceiveMemoryWarning
@@ -87,6 +100,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+-(IBAction)toggleNotifyExitLeash:(UISwitch *)sender{
+    self.notifyOnExit = sender.on;
+    //set update monitered region
+}
+
+
 
 /*
 #pragma mark - Navigation

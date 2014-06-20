@@ -29,6 +29,45 @@
        return YES;
 }
 
+
+- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
+{
+    /*
+     A user can transition in or out of a region while the application is not running. When this happens CoreLocation will launch the application momentarily, call this delegate method and we will let the user know via a local notification.
+     */
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    
+    if(state == CLRegionStateInside)
+    {
+        notification.alertBody = NSLocalizedString(@"Tag has entered range!", @"");
+    }
+    else if(state == CLRegionStateOutside)
+    {
+        notification.alertBody = NSLocalizedString(@"Tag has left range!", @"");
+    }
+    else
+    {
+        return;
+    }
+    
+    /*
+     If the application is in the foreground, it will get a callback to application:didReceiveLocalNotification:.
+     If it's not, iOS will display the notification to the user.
+     */
+    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+}
+
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    // If the application is in the foreground, we will notify the user of the region's state via an alert.
+    NSString *cancelButtonTitle = NSLocalizedString(@"OK", @"Title for cancel button in local notification");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:notification.alertBody message:nil delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
+    [alert show];
+}
+
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

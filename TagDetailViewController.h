@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface TagDetailViewController : UIViewController
+@interface TagDetailViewController : UIViewController <CLLocationManagerDelegate>
+
+
 @property (nonatomic, strong) PFObject* TagDetail;
 @property (strong, nonatomic)IBOutlet UILabel *tagname;
 @property (nonatomic, strong)IBOutlet UIImageView *immediate;
@@ -23,7 +25,10 @@
 @property CLBeaconMinorValue *minor;
 @property CLBeacon *proximity;
 @property (nonatomic,strong) NSMutableDictionary *tags;
-
+@property BOOL notifyOnExit;
+@property BOOL notifyOnEntrance;
+@property (nonatomic, strong) IBOutlet UISwitch *notifyOnExitSwitch;
+@property (nonatomic, strong) IBOutlet UISwitch *notifyOnEntranceSwitch;
 
 
 @end
