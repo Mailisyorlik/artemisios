@@ -26,7 +26,8 @@
 @property CLBeacon *beacon;
 @property (nonatomic,strong) NSMutableDictionary *tags;
 @property CLLocationCoordinate2D *location;
-@property (nonatomic, assign) BOOL notifyOnExit;
+@property (nonatomic, assign) BOOL *notifyOnExit;
+@property (nonatomic, assign) BOOL *notifyOnEnter;
 
 
 

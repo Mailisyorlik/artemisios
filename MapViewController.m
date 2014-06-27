@@ -25,6 +25,7 @@
 }
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
+    BOOL *didNotifyOnEnter = NO;
     
 }
 
