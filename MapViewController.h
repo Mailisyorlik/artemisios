@@ -15,9 +15,10 @@
  
 @property (strong, nonatomic)IBOutlet  MKMapView *mapView;
 @property (nonatomic, strong) PFObject* TagDetail;
-@property CLLocationManager *locationManager;
+@property CLLocationManager* locationManager;
 
 @property CLBeaconRegion *rangedRegion;
+
 @property NSUUID *artemisUUID;
 @property CLBeaconMajorValue *major;
 @property CLBeaconMinorValue *minor;
@@ -25,6 +26,8 @@
 @property CLBeacon *beacon;
 @property (nonatomic,strong) NSMutableDictionary *tags;
 @property CLLocationCoordinate2D *location;
+@property (nonatomic, assign) BOOL notifyOnExit;
+
 
 
 

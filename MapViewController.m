@@ -23,6 +23,21 @@
     }
     return self;
 }
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
+{
+    
+}
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
+{
+    
+}
+
+
 
 
 - (void)viewDidLoad
@@ -45,18 +60,7 @@
     [annotation setTitle:@""];
     [self.mapView addAnnotation:annotation];
     
-    if (_beacon.proximity == CLProximityNear) {
-        CLLocation *location = _locationManager.location;
-        CLLocationCoordinate2D coordinate = [location coordinate];
-        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
-                                                      longitude:coordinate.longitude];
-        
-        
-        [annotation setTitle:@"Name"];
-        [self.mapView addAnnotation:annotation];
-        
-    }
-    
+  
     
     //within the above lines, the code for lat long may have to be changed to drop the pin at the lat long location of the phone when the tag leaves range
   
