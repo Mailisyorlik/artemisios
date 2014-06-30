@@ -25,12 +25,26 @@
 }
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
 {
-    BOOL *didNotifyOnEnter = NO;
+    BOOL *notifyOnEnter = NO;
     
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
+    
+    BOOL *notifyOnExit = YES;
+    
+    if( *notifyOnExit == YES ) {
+        [self.mapView.delegate self];
+        [self.mapView setShowsUserLocation:YES];
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        CLLocationCoordinate2D coord;
+        [annotation setCoordinate: coord];
+        [annotation setTitle:@""];
+        [self.mapView addAnnotation:annotation];
+        
+    }
+    
     
 }
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region
