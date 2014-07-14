@@ -11,7 +11,8 @@
 
 @interface ArtemisTagViewController : PFQueryTableViewController<PFLogInViewControllerDelegate,
 PFSignUpViewControllerDelegate>
-
+@property CLLocationManager *locationManager;
+@property CLBeaconRegion *rangedRegion;
 -(IBAction)addTags:(id)sender;
 
 @end

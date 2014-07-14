@@ -42,6 +42,7 @@
         [annotation setCoordinate: coord];
         [annotation setTitle:@""];
         [self.mapView addAnnotation:annotation];
+        //still needs to pull data from parse for name and date
         
     }
     
