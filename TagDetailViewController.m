@@ -21,7 +21,21 @@
         // Custom initialization
     }
     return self;
+
 }
+
+
+- (void)peripheralManager:(CBPeripheralManager *)peripheral
+            didAddService:(CBService *)service
+                    error:(NSError *)error {
+    
+    if (error) {
+        NSLog(@"Error publishing service: %@", [error localizedDescription]);
+    }
+
+
+}
+
 - (void)viewDidAppear:(BOOL)animated {
         [super viewDidAppear:animated];
          [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
@@ -106,7 +120,6 @@
     self.notifyOnExit = sender.on;
     //set update monitered region
 }
-
 
 
 /*

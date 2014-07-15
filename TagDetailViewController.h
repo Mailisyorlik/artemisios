@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "BLEDevice.h"
+#import "BLEUtility.h"
+
+
+
 
 @interface TagDetailViewController : UIViewController <CLLocationManagerDelegate>
 
@@ -29,6 +34,7 @@
 @property BOOL notifyOnEntrance;
 @property (nonatomic, strong) IBOutlet UISwitch *notifyOnExitSwitch;
 @property (nonatomic, strong) IBOutlet UISwitch *notifyOnEntranceSwitch;
+@property (nonatomic, strong) IBOutlet UISwitch *LED;
 
 
 @end
