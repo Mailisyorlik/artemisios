@@ -161,8 +161,8 @@
     [self.m cancelPeripheralConnection:peripheral];
     for (CBService *s in peripheral.services) {
         NSLog(@"Service found : %@",s.UUID);
-        if ([s.UUID isEqual:[CBUUID UUIDWithString:@"F000AA00-0451-4000-B000-000000000000"]])  {
-            NSLog(@"This is a SensorTag !");
+        if ([s.UUID isEqual:[CBUUID UUIDWithString:@" A2F065FF-426E-4043-B45C-861F801BAE2D"]])  {
+            NSLog(@"This is a Tag !");
             found = YES;
         }
     }

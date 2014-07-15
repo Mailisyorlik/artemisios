@@ -135,6 +135,7 @@
         TagDetailViewController *controller = (TagDetailViewController*)[segue destinationViewController];
         [controller setTagDetail: object];
         
+        
     }
     
 }
