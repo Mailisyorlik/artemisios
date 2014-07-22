@@ -120,10 +120,13 @@
             [object deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 //ask parse for all data
                 [self loadObjects];
-                [self.locationManager stopRangingBeaconsInRegion: self.rangedRegion];                    }];
+                [self.locationManager stopMonitoringForRegion:(self.beaconRegion)];
+            }];
     }
 
 }
+
+
 
 
 

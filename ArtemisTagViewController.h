@@ -13,6 +13,9 @@
 PFSignUpViewControllerDelegate>
 @property CLLocationManager *locationManager;
 @property CLBeaconRegion *rangedRegion;
+@property CLBeaconRegion *beaconRegion;
+
+
 -(IBAction)addTags:(id)sender;
 
 @end

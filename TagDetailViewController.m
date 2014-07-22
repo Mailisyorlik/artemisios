@@ -36,6 +36,9 @@
 
 }
 
+
+
+
 - (void)viewDidAppear:(BOOL)animated {
         [super viewDidAppear:animated];
          [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
