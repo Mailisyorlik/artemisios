@@ -63,10 +63,8 @@
     self.artemisUUID = [[NSUUID alloc] initWithUUIDString: @"A2F065FF-426E-4043-B45C-861F801BAE2D"];
     
     self.title = [self.TagDetail objectForKey:@"Name"];
-        
+    
     self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID major:[[self.TagDetail objectForKey:@"Major"] intValue] minor:[[self.TagDetail objectForKey:@"Minor"] intValue] identifier:self.artemisUUID.UUIDString];
-    
-    
 }
     
         
@@ -121,9 +119,32 @@
 
 -(IBAction)toggleNotifyExitLeash:(UISwitch *)sender{
     self.notifyOnExit = sender.on;
+    
     //set update monitered region
-}
+    NSLog(@"Toggled the switch for leash");
+    
+    if(self.notifyOnExit)
+    {
+        NSLog(@"Start monitoring for background enter and exit");
+        CLBeaconRegion *leashRegion = self.rangedRegion;
+        leashRegion.notifyOnExit = self.notifyOnExit;
+        leashRegion.notifyOnEntry = self.notifyOnExit;
+        
+        [self.locationManager startMonitoringForRegion:leashRegion];
+        
+    } else {
+        NSLog(@"Stop monitoring for background enter and exit");
+        CLBeaconRegion *unleashRegion = self.rangedRegion;
+        unleashRegion.notifyOnExit = self.notifyOnExit;
+        unleashRegion.notifyOnEntry = self.notifyOnExit;
+        
+        [self.locationManager stopMonitoringForRegion:unleashRegion];
 
+    }
+    
+    
+    
+}
 
 /*
 #pragma mark - Navigation
