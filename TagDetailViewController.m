@@ -41,13 +41,15 @@
 
 - (void)viewDidAppear:(BOOL)animated {
         [super viewDidAppear:animated];
-         [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
+        [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
+    [self.locationManager startMonitoringForRegion:self.rangedRegion];
      }
 
 
 - (void)viewDidDisappear:(BOOL)animated {
         [super viewDidAppear:animated];
         [self.locationManager stopRangingBeaconsInRegion: self.rangedRegion];
+
     }
 
 
@@ -64,13 +66,7 @@
     
     self.title = [self.TagDetail objectForKey:@"Name"];
     
-    
-    
-    self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID identifier:self.artemisUUID.UUIDString];
-    
-    self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID  major:[[self.TagDetail objectForKey:@"Major"] intValue]  minor:[[self.TagDetail objectForKey:@"@Minor"] intValue] identifier:self.artemisUUID.UUIDString];
-                                                                                                                                                        
-    
+    self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID major:[[self.TagDetail objectForKey:@"Major"] intValue] minor:[[self.TagDetail objectForKey:@"Minor"] intValue] identifier:self.artemisUUID.UUIDString];
 }
     
         
@@ -78,6 +74,9 @@
 -(void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:
     (CLBeaconRegion *)region
     {
+        NSLog(@"Ranged %lu", (unsigned long)[beacons count]);
+        
+        
         for(CLBeacon *beacon in beacons)
         {
             
@@ -104,6 +103,7 @@
         }  //END THE 4th IF statement
             
     else {
+        NSLog(@"Not found beacon");
         [self.near setHidden:(YES)];
         [self.immediate setHidden:(YES)];
         [self.far setHidden:(YES)];
@@ -140,6 +140,11 @@
     }
 }
 
+    }
+    
+    
+    
+}
 
 /*
 #pragma mark - Navigation

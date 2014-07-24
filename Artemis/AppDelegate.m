@@ -39,10 +39,12 @@
     
     if(state == CLRegionStateInside)
     {
+        NSLog(@"Tag has entered range!");
         notification.alertBody = NSLocalizedString(@"Tag has entered range!", @"");
     }
     else if(state == CLRegionStateOutside)
     {
+        NSLog(@"Tag has left the range!");
         notification.alertBody = NSLocalizedString(@"Tag has left range!", @"");
     }
     else
