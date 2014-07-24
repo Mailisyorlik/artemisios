@@ -123,8 +123,21 @@
     self.notifyOnExit = sender.on;
     
     NSLog(@"Toggled switch for leash");
-    
-    
+    if (self.notifyOnExit){
+        CLBeaconRegion *leashRegion = self.rangedRegion;
+        leashRegion.notifyOnExit = self.notifyOnExit;
+        leashRegion.notifyOnEntry = self.notifyOnExit;
+        [self.locationManager startMonitoringForRegion:leashRegion];
+        
+        
+    }
+    else { CLBeaconRegion *unleashRegion = self.rangedRegion;
+        unleashRegion.notifyOnExit = NO;
+        unleashRegion.notifyOnEntry = NO;
+        [self.locationManager stopMonitoringForRegion:unleashRegion];
+        
+        
+    }
 }
 
 
