@@ -84,8 +84,8 @@
         
         if(beacon.proximity == CLProximityNear) { //End first if, start if else
                         NSLog(@"Show Near");
-                        [self.near setHidden:NO];       //semicolons
-                        [self.immediate setHidden: YES];    //  misspelled immediate
+                        [self.near setHidden:NO];
+                        [self.immediate setHidden: YES];
                         [self.far setHidden: YES];
     } else if(beacon.proximity == CLProximityFar) { //END THE 2nd, start the 3rd
                         NSLog(@"Show Far");
@@ -121,7 +121,10 @@
 
 -(IBAction)toggleNotifyExitLeash:(UISwitch *)sender{
     self.notifyOnExit = sender.on;
-    //set update monitered region
+    
+    NSLog(@"Toggled switch for leash");
+    
+    
 }
 
 
