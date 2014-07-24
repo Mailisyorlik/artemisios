@@ -41,13 +41,15 @@
 
 - (void)viewDidAppear:(BOOL)animated {
         [super viewDidAppear:animated];
-         [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
+        [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
+    [self.locationManager startMonitoringForRegion:self.rangedRegion];
      }
 
 
 - (void)viewDidDisappear:(BOOL)animated {
         [super viewDidAppear:animated];
         [self.locationManager stopRangingBeaconsInRegion: self.rangedRegion];
+
     }
 
 
