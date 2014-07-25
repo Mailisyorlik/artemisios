@@ -122,29 +122,41 @@
 -(IBAction)toggleNotifyExitLeash:(UISwitch *)sender{
     self.notifyOnExit = sender.on;
     
-    NSLog(@"Toggled switch for leash");
-    if (self.notifyOnExit){
+    //set update monitered region
+    NSLog(@"Toggled the switch for leash");
+    
+    if(self.notifyOnExit)
+    {
+        NSLog(@"Start monitoring for background enter and exit");
         CLBeaconRegion *leashRegion = self.rangedRegion;
         leashRegion.notifyOnExit = self.notifyOnExit;
         leashRegion.notifyOnEntry = self.notifyOnExit;
+        
         [self.locationManager startMonitoringForRegion:leashRegion];
         
-        
     }
-    else { CLBeaconRegion *unleashRegion = self.rangedRegion;
-        unleashRegion.notifyOnExit = NO;
-        unleashRegion.notifyOnEntry = NO;
+    
+}
+-(IBAction)toggleNotifyEnterLeash:(UISwitch *)sender{
+    self.notifyOnEntrance = sender.on;
+    
+    //set update monitored region
+    NSLog(@"Toggled switch for enter leash");
+    
+    if(self.notifyOnEntrance)
+    {
+        NSLog(@"Start monitoring for background enter and exit");
+        CLBeaconRegion *unleashRegion = self.rangedRegion;
+        unleashRegion.notifyOnExit = self.notifyOnExit;
+        unleashRegion.notifyOnEntry = self.notifyOnEntrance;
+        
         [self.locationManager stopMonitoringForRegion:unleashRegion];
         
-        
     }
+    
 }
 
-    }
-    
-    
-    
-}
+
 
 /*
 #pragma mark - Navigation
