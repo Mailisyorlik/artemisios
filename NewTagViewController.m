@@ -63,8 +63,7 @@
     newTag[@"UUID"] = self.selectedBeacon.proximityUUID.UUIDString;
     newTag[@"Major"] = self.selectedBeacon.major;
     newTag[@"Minor"] = self.selectedBeacon.minor;
-    
-
+   
     
     
     if ( [self.tagName.text isEqualToString:@""]) {
@@ -72,7 +71,7 @@
         [alert show];
     
         
-        
+       
         
     }
     
@@ -92,6 +91,7 @@
             newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
             [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 [self.navigationController popToRootViewControllerAnimated:YES];
+                
     }];
     
     }

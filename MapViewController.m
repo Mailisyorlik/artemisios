@@ -23,18 +23,14 @@
     }
     return self;
 }
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
-{
-    BOOL *notifyOnEnter = NO;
-    
-}
+
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
     
-    BOOL *notifyOnExit = YES;
+ 
     
-    if( *notifyOnExit == YES ) {
+    
         [self.mapView.delegate self];
         [self.mapView setShowsUserLocation:YES];
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -44,7 +40,7 @@
         [self.mapView addAnnotation:annotation];
         //still needs to pull data from parse for name and date
         
-    }
+    
     
     
 }
