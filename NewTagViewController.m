@@ -64,6 +64,11 @@
     newTag[@"Major"] = self.selectedBeacon.major;
     newTag[@"Minor"] = self.selectedBeacon.minor;
    
+    PFQuery *queryUUID = [PFQuery queryWithClassName:newTag];
+    PFQuery *queryMajor = [PFQuery queryWithClassName:newTag];
+    PFQuery *queryMinor = [PFQuery queryWithClassName:newTag];
+    
+                      
     
     
     if ( [self.tagName.text isEqualToString:@""]) {
@@ -85,7 +90,7 @@
         [delegate.locationManager startUpdatingLocation];
         CLLocationCoordinate2D coordinate = [[delegate.locationManager location] coordinate];
         PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-        [newTag setObject:geoPoint forKey:@"LastLocation"];
+        [newTag setObject:geoPoint forKey:@"Last Location"];
         
         
             newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
