@@ -17,6 +17,7 @@
 @property (nonatomic)BOOL showSelectionIndicator;
 
 
+
 @property CLBeacon *selectedBeacon;
 
 @end

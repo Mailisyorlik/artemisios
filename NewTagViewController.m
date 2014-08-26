@@ -65,6 +65,10 @@
     newTag[@"Minor"] = self.selectedBeacon.minor;
    
     PFQuery *queryUUID = [PFQuery queryWithClassName:newTag];
+    [PFQuery performQueryWithID: @"UUID" block:^(PFObject *major, NSError *error)]{
+        NSLog(@"UUID detected");
+    }
+    
     PFQuery *queryMajor = [PFQuery queryWithClassName:newTag];
     PFQuery *queryMinor = [PFQuery queryWithClassName:newTag];
     
