@@ -18,6 +18,8 @@
 
 
 
+
+
 @property CLBeacon *selectedBeacon;
 
 @end
