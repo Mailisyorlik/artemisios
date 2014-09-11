@@ -64,11 +64,7 @@
     newTag[@"Major"] = self.selectedBeacon.major;
     newTag[@"Minor"] = self.selectedBeacon.minor;
    
-    PFQuery *query = [PFQuery queryWithClassName:@"Tag"];
-    [query whereKey:(@"UUID") equalTo:self.selectedBeacon.proximityUUID.UUIDString];
-    [query whereKey:(@"Major") equalTo:self.selectedBeacon.major];
-    [query whereKey:(@"Minor") equalTo:self.selectedBeacon.minor];
-    
+ 
    
     
     
@@ -103,7 +99,7 @@
                    [delegate.locationManager startUpdatingLocation];
                    CLLocationCoordinate2D coordinate = [[delegate.locationManager location] coordinate];
                    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-                   [newTag setObject:geoPoint forKey:@"Last Location"];
+                   [newTag setObject:geoPoint forKey:@"LastLocation"];
                    
                    
                    newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
@@ -111,6 +107,11 @@
                        [self.navigationController popToRootViewControllerAnimated:YES];
                    
                    }];
+               }
+               else {
+                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Artemis" message:@"This tag is taken!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                   [alert show];
+                   
                }
            } else {
                NSLog(@"Error found");
