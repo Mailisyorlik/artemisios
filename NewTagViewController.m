@@ -64,16 +64,15 @@
     newTag[@"Major"] = self.selectedBeacon.major;
     newTag[@"Minor"] = self.selectedBeacon.minor;
    
-    PFQuery *queryUUID = [PFQuery queryWithClassName:newTag];
-    int UUID  = [[newTag objectForKey:@"UUID"] intValue];
+    PFQuery *query = [PFQuery queryWithClassName:@"Tag"];
+    [query whereKey:(@"UUID") equalTo:self.selectedBeacon.proximityUUID.UUIDString];
+    [query whereKey:(@"Major") equalTo:self.selectedBeacon.major];
+    [query whereKey:(@"Minor") equalTo:self.selectedBeacon.minor];
+    
+   
     
     
-    PFQuery *queryMajor = [PFQuery queryWithClassName:newTag];
-    int major = [[newTag objectForKey:@"major"] intValue];
     
-    
-    PFQuery *queryMinor = [PFQuery queryWithClassName:newTag];
-    int minor = [[newTag objectForKey:@"minor"] intValue];
     
                       
     
@@ -83,28 +82,44 @@
         [alert show];
     
         
+    } else {
        
         
-    }
-    
-    
-    
-    else {
+        PFQuery *query = [PFQuery queryWithClassName:@"Tag"];
+        [query whereKey:(@"UUID") equalTo:self.selectedBeacon.proximityUUID.UUIDString];
+        [query whereKey:(@"Major") equalTo:self.selectedBeacon.major];
+        [query whereKey:(@"Minor") equalTo:self.selectedBeacon.minor];
        
-        AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        delegate.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        delegate.locationManager.distanceFilter = kCLDistanceFilterNone;
-        [delegate.locationManager startUpdatingLocation];
-        CLLocationCoordinate2D coordinate = [[delegate.locationManager location] coordinate];
-        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-        [newTag setObject:geoPoint forKey:@"Last Location"];
+       [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+           if (!error) {
+               NSLog(@"No errors found!");
+              
+               if (objects.count==0){
+                   
+               
+                   AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                   delegate.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+                   delegate.locationManager.distanceFilter = kCLDistanceFilterNone;
+                   [delegate.locationManager startUpdatingLocation];
+                   CLLocationCoordinate2D coordinate = [[delegate.locationManager location] coordinate];
+                   PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+                   [newTag setObject:geoPoint forKey:@"Last Location"];
+                   
+                   
+                   newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+                   [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                       [self.navigationController popToRootViewControllerAnimated:YES];
+                   
+                   }];
+               }
+           } else {
+               NSLog(@"Error found");
+               
+           }
+       }];
         
         
-            newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-            [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                [self.navigationController popToRootViewControllerAnimated:YES];
-                
-    }];
+
     
     }
 
