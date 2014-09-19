@@ -71,77 +71,41 @@
                                     <segue destination="QUy-BD-bpt" kind="push" id="oON-VT-r47"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fUx-R8-qHE">
-                                <rect key="frame" x="37" y="283" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CVV-rr-fOH">
-                                <rect key="frame" x="224" y="283" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ringer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc3-x7-eyD">
-                                <rect key="frame" x="224" y="328" width="61" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96n-BU-7Lu">
-                                <rect key="frame" x="40" y="328" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="immediate.png" translatesAutoresizingMaskIntoConstraints="NO" id="3zJ-RN-axe">
-                                <rect key="frame" x="74" y="139" width="172" height="122"/>
+                                <rect key="frame" x="56" y="125" width="221" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="near.png" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-aa-iAB">
-                                <rect key="frame" x="97" y="171" width="127" height="90"/>
+                                <rect key="frame" x="56" y="125" width="221" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="far.png" translatesAutoresizingMaskIntoConstraints="NO" id="1DB-5w-7QW">
-                                <rect key="frame" x="120" y="202" width="81" height="59"/>
+                                <rect key="frame" x="56" y="125" width="221" height="221"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FrY-tz-apO">
-                                <rect key="frame" x="37" y="357" width="51" height="31"/>
+                                <rect key="frame" x="136" y="354" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="toggleNotifyExitLeash:" destination="jdw-wb-4Lj" eventType="valueChanged" id="KQy-2F-GJA"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exit leash" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW0-ek-ijG">
-                                <rect key="frame" x="40" y="396" width="79" height="21"/>
+                                <rect key="frame" x="127" y="391" width="79" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Exit leash"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rM5-1f-828">
-                                <rect key="frame" x="224" y="357" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="toggleNotifyEnterLeash:" destination="jdw-wb-4Lj" eventType="valueChanged" id="gcT-Yf-bcz"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter leash " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSc-BC-fc1">
-                                <rect key="frame" x="216" y="396" width="90" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.11735664993087469" green="0.45496098128561391" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.88235300779342651" green="0.89803928136825562" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="5As-fc-PYY"/>
                     <connections>
                         <outlet property="far" destination="1DB-5w-7QW" id="LHK-8N-W67"/>
                         <outlet property="immediate" destination="3zJ-RN-axe" id="yG5-FB-iLv"/>
                         <outlet property="near" destination="uJO-aa-iAB" id="w8O-Gb-OQ2"/>
-                        <outlet property="notifyOnEntranceSwitch" destination="rM5-1f-828" id="sQL-w3-VGM"/>
                         <outlet property="notifyOnExitSwitch" destination="FrY-tz-apO" id="258-7B-w5e"/>
                         <outlet property="showOnMap" destination="imP-5w-b0Q" id="hyq-fw-3GW"/>
                     </connections>
@@ -340,9 +304,9 @@
         <image name="15-tags" width="24" height="25"/>
         <image name="19-gear" width="26" height="26"/>
         <image name="Map" width="26" height="21"/>
-        <image name="far.png" width="162" height="117"/>
-        <image name="immediate.png" width="344" height="244"/>
-        <image name="near.png" width="254" height="180"/>
+        <image name="far.png" width="441" height="441"/>
+        <image name="immediate.png" width="441" height="441"/>
+        <image name="near.png" width="441" height="441"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

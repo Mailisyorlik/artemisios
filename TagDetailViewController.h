@@ -35,6 +35,6 @@
 @property (nonatomic, strong) IBOutlet UISwitch *notifyOnExitSwitch;
 @property (nonatomic, strong) IBOutlet UISwitch *notifyOnEntranceSwitch;
 @property (nonatomic, strong) IBOutlet UISwitch *LED;
-
+@property (nonatomic, strong) CLBeaconRegion *leashRegion;
 
 @end

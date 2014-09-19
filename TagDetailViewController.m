@@ -67,6 +67,7 @@
     self.title = [self.TagDetail objectForKey:@"Name"];
     
     self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID major:[[self.TagDetail objectForKey:@"Major"] intValue] minor:[[self.TagDetail objectForKey:@"Minor"] intValue] identifier:self.artemisUUID.UUIDString];
+    self.leashRegion=self.rangedRegion;
 }
     
         
@@ -120,7 +121,7 @@
 
 
 -(IBAction)toggleNotifyExitLeash:(UISwitch *)sender{
-    self.notifyOnExit = sender.on;
+   /* self.notifyOnExit = sender.on;
     
     //set update monitered region
     NSLog(@"Toggled the switch for leash");
@@ -128,30 +129,32 @@
     if(self.notifyOnExit)
     {
         NSLog(@"Start monitoring for background enter and exit");
-        CLBeaconRegion *leashRegion = self.rangedRegion;
-        leashRegion.notifyOnExit = self.notifyOnExit;
-        leashRegion.notifyOnEntry = self.notifyOnExit;
+        self.leashRegion.notifyOnExit = self.notifyOnExit;
+        self.leashRegion.notifyOnEntry = self.notifyOnExit;
         
-        [self.locationManager startMonitoringForRegion:leashRegion];
+        [self.locationManager stopMonitoringForRegion:self.leashRegion];
         
     }
-    
+  */
 }
 -(IBAction)toggleNotifyEnterLeash:(UISwitch *)sender{
     self.notifyOnEntrance = sender.on;
     
     //set update monitored region
-    NSLog(@"Toggled switch for enter leash");
+    NSLog(@"Toggled switch for enter leash: it is now %hhd", self.notifyOnEntrance);
+
+    self.leashRegion.notifyOnEntry = self.notifyOnEntrance;
+    [self.locationManager stopMonitoringForRegion:self.leashRegion];
+    [self.leashRegion setNotifyOnExit:NO];
     
     if(self.notifyOnEntrance)
     {
-        NSLog(@"Start monitoring for background enter and exit");
-        CLBeaconRegion *unleashRegion = self.rangedRegion;
-        unleashRegion.notifyOnExit = self.notifyOnExit;
-        unleashRegion.notifyOnEntry = self.notifyOnEntrance;
+        NSLog(@"Start monitoring for background enter");
         
-        [self.locationManager stopMonitoringForRegion:unleashRegion];
-        
+        [self.locationManager startMonitoringForRegion:self.leashRegion];
+    } else {
+        NSLog(@"Stop monitoring for background enter");
+        [self.locationManager stopMonitoringForRegion:self.leashRegion];
     }
     
 }

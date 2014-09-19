@@ -37,6 +37,8 @@
      */
     UILocalNotification *notification = [[UILocalNotification alloc] init];
     
+    
+    
     if(state == CLRegionStateInside)
     {
         notification.alertBody = NSLocalizedString(@"Tag has entered range!", @"");
