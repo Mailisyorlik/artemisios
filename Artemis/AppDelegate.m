@@ -12,12 +12,16 @@
 #import "AppDelegate.h"
 #import "deviceSelector.h"
 #import <Parse/Parse.h>
+#import <FYX/FYX.h>
+
 
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [FYX setAppId:@"32e86d26d9027475775e413fcc52ac0ef258cca63a3601ca2ccc1037bbb5aded" appSecret:@"d6297d5f064867741e2a167371b012ff5a4f7a039ea0ca7c4c00bb4205dcad9a" callbackUrl:@"artemis://authcode"];
+    
     [Parse setApplicationId:@"v0IIwf9rFyBBVieEApsGCmJxaS2ZR9mkBthUBzuZ"
                   clientKey:@"pSPNXRXYAsojBxiseKhvvcnDGemRCyNUBtLEZla7"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];

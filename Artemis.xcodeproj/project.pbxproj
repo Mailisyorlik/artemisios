@@ -47,6 +47,14 @@
 		0CF414EF19CCF3B800A1B38B /* far.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CF414EE19CCF3B800A1B38B /* far.png */; };
 		0CF414F219CCF3C900A1B38B /* near.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CF414F019CCF3C900A1B38B /* near.png */; };
 		0CF414F319CCF3C900A1B38B /* immediate.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CF414F119CCF3C900A1B38B /* immediate.png */; };
+		0CF4150119DE358F00A1B38B /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF414F519DE358F00A1B38B /* Common.framework */; };
+		0CF4150219DE359000A1B38B /* ContextCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF414F719DE358F00A1B38B /* ContextCore.framework */; };
+		0CF4150319DE359000A1B38B /* ContextLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF414F919DE358F00A1B38B /* ContextLocation.framework */; };
+		0CF4150419DE359000A1B38B /* DataModels.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CF414FB19DE358F00A1B38B /* DataModels.bundle */; };
+		0CF4150519DE359000A1B38B /* ContextProfiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF414FD19DE358F00A1B38B /* ContextProfiling.framework */; };
+		0CF4150619DE359000A1B38B /* FYX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF414FE19DE358F00A1B38B /* FYX.framework */; };
+		0CF4150719DE359000A1B38B /* NetworkServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF4150019DE358F00A1B38B /* NetworkServices.framework */; };
+		0CF4150919DE35E700A1B38B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CF4150819DE35E700A1B38B /* CoreData.framework */; };
 		244C36F418F4AEE200899958 /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36E918F4AEE200899958 /* BLEDevice.m */; };
 		244C36F518F4AEE200899958 /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36EB18F4AEE200899958 /* BLEUtility.m */; };
 		244C36F618F4AEE200899958 /* deviceCellTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244C36ED18F4AEE200899958 /* deviceCellTemplate.m */; };
@@ -130,6 +138,14 @@
 		0CF414EE19CCF3B800A1B38B /* far.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = far.png; sourceTree = "<group>"; };
 		0CF414F019CCF3C900A1B38B /* near.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = near.png; sourceTree = "<group>"; };
 		0CF414F119CCF3C900A1B38B /* immediate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = immediate.png; sourceTree = "<group>"; };
+		0CF414F519DE358F00A1B38B /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Common.framework; sourceTree = "<group>"; };
+		0CF414F719DE358F00A1B38B /* ContextCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextCore.framework; sourceTree = "<group>"; };
+		0CF414F919DE358F00A1B38B /* ContextLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextLocation.framework; sourceTree = "<group>"; };
+		0CF414FB19DE358F00A1B38B /* DataModels.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DataModels.bundle; sourceTree = "<group>"; };
+		0CF414FD19DE358F00A1B38B /* ContextProfiling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextProfiling.framework; sourceTree = "<group>"; };
+		0CF414FE19DE358F00A1B38B /* FYX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FYX.framework; sourceTree = "<group>"; };
+		0CF4150019DE358F00A1B38B /* NetworkServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NetworkServices.framework; sourceTree = "<group>"; };
+		0CF4150819DE35E700A1B38B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		244C36E818F4AEE200899958 /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDevice.h; sourceTree = "<group>"; };
 		244C36E918F4AEE200899958 /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDevice.m; sourceTree = "<group>"; };
 		244C36EA18F4AEE200899958 /* BLEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEUtility.h; sourceTree = "<group>"; };
@@ -160,20 +176,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CF4150919DE35E700A1B38B /* CoreData.framework in Frameworks */,
 				0CCD39BA19089A070069665A /* Social.framework in Frameworks */,
 				0CCD39AD190884A60069665A /* SystemConfiguration.framework in Frameworks */,
 				0CCD39AB1908849B0069665A /* StoreKit.framework in Frameworks */,
+				0CF4150219DE359000A1B38B /* ContextCore.framework in Frameworks */,
 				0CCD39A91908848F0069665A /* Security.framework in Frameworks */,
 				0CCD39A7190884850069665A /* QuartzCore.framework in Frameworks */,
 				0C2D3CFA1909D00400EEA5D2 /* FacebookSDK.framework in Frameworks */,
+				0CF4150119DE358F00A1B38B /* Common.framework in Frameworks */,
 				0CCD39A51908847B0069665A /* MobileCoreServices.framework in Frameworks */,
 				0CCD39A31908846F0069665A /* libz.dylib in Frameworks */,
+				0CF4150619DE359000A1B38B /* FYX.framework in Frameworks */,
 				0C2B90F01906F37700324ED5 /* CoreLocation.framework in Frameworks */,
 				0C5C36F818D9269900A55664 /* CoreGraphics.framework in Frameworks */,
 				0CCD39A11908844B0069665A /* CFNetwork.framework in Frameworks */,
+				0CF4150519DE359000A1B38B /* ContextProfiling.framework in Frameworks */,
 				0CCD399F190884360069665A /* AudioToolbox.framework in Frameworks */,
 				0C4C3B9818F8B35E009971F1 /* MapKit.framework in Frameworks */,
+				0CF4150319DE359000A1B38B /* ContextLocation.framework in Frameworks */,
 				0C79CE2418F4ADDA007C9B33 /* MessageUI.framework in Frameworks */,
+				0CF4150719DE359000A1B38B /* NetworkServices.framework in Frameworks */,
 				0C79CE2218F4ADCF007C9B33 /* CoreBluetooth.framework in Frameworks */,
 				0C5C36FA18D9269900A55664 /* UIKit.framework in Frameworks */,
 				0CCD399D190883F60069665A /* Parse.framework in Frameworks */,
@@ -243,6 +266,13 @@
 		0C5C36F418D9269900A55664 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CF4150819DE35E700A1B38B /* CoreData.framework */,
+				0CF414F419DE358F00A1B38B /* Common.embeddedframework */,
+				0CF414F619DE358F00A1B38B /* ContextCore.embeddedframework */,
+				0CF414F819DE358F00A1B38B /* ContextLocation.embeddedframework */,
+				0CF414FC19DE358F00A1B38B /* ContextProfiling.embeddedframework */,
+				0CF414FE19DE358F00A1B38B /* FYX.framework */,
+				0CF414FF19DE358F00A1B38B /* NetworkServices.embeddedframework */,
 				0CCD39B919089A070069665A /* Social.framework */,
 				0CCD39AC190884A60069665A /* SystemConfiguration.framework */,
 				0CCD39AA1908849B0069665A /* StoreKit.framework */,
@@ -313,6 +343,55 @@
 				0C5C372018D9269900A55664 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CF414F419DE358F00A1B38B /* Common.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				0CF414F519DE358F00A1B38B /* Common.framework */,
+			);
+			path = Common.embeddedframework;
+			sourceTree = "<group>";
+		};
+		0CF414F619DE358F00A1B38B /* ContextCore.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				0CF414F719DE358F00A1B38B /* ContextCore.framework */,
+			);
+			path = ContextCore.embeddedframework;
+			sourceTree = "<group>";
+		};
+		0CF414F819DE358F00A1B38B /* ContextLocation.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				0CF414F919DE358F00A1B38B /* ContextLocation.framework */,
+				0CF414FA19DE358F00A1B38B /* Resources */,
+			);
+			path = ContextLocation.embeddedframework;
+			sourceTree = "<group>";
+		};
+		0CF414FA19DE358F00A1B38B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0CF414FB19DE358F00A1B38B /* DataModels.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0CF414FC19DE358F00A1B38B /* ContextProfiling.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				0CF414FD19DE358F00A1B38B /* ContextProfiling.framework */,
+			);
+			path = ContextProfiling.embeddedframework;
+			sourceTree = "<group>";
+		};
+		0CF414FF19DE358F00A1B38B /* NetworkServices.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				0CF4150019DE358F00A1B38B /* NetworkServices.framework */,
+			);
+			path = NetworkServices.embeddedframework;
 			sourceTree = "<group>";
 		};
 		244C36FA18F4AEFE00899958 /* Images */ = {
@@ -436,6 +515,7 @@
 				244C370718F4AEFE00899958 /* _icon@2x_144.png in Resources */,
 				0C5C370918D9269900A55664 /* Main.storyboard in Resources */,
 				244C370A18F4AEFE00899958 /* accelerometer.png in Resources */,
+				0CF4150419DE359000A1B38B /* DataModels.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,12 +680,18 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"/Users/Liam/Downloads/ParsePlatform-LoginAndSignUpTutorial-0710943",
+					"$(PROJECT_DIR)/Common.embeddedframework",
+					"$(PROJECT_DIR)/ContextCore.embeddedframework",
+					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
+					"$(PROJECT_DIR)/ContextProfiling.embeddedframework",
+					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Artemis/Artemis-Prefix.pch";
 				INFOPLIST_FILE = "Artemis/Artemis-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -619,12 +705,18 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"/Users/Liam/Downloads/ParsePlatform-LoginAndSignUpTutorial-0710943",
+					"$(PROJECT_DIR)/Common.embeddedframework",
+					"$(PROJECT_DIR)/ContextCore.embeddedframework",
+					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
+					"$(PROJECT_DIR)/ContextProfiling.embeddedframework",
+					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Artemis/Artemis-Prefix.pch";
 				INFOPLIST_FILE = "Artemis/Artemis-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -77,16 +77,37 @@
         
         [self loadObjects];
         
+        [FYX startService:self];
         
-        
+        self.visitManager = [FYXVisitManager new];
+        self.visitManager.delegate = self;
+        [self.visitManager start];
         
     }
 }
 
 
+-(void)didArrive:(FYXVisit *)visit;
+{
+    
+    NSLog(@"Found Beacon", visit.transmitter.name);
+    
+}
+
+
+-(void)receivedSighting:(FYXVisit *)visit updateTime:(NSDate *)updateTime RSSI:(NSNumber *)RSSI
+{
+    NSLog(@"Received a sighting");
+    
+}
 
 
 
+-(void) serviceStarted
+{
+    NSLog(@"FYX service successfully started");
+    
+}
 
 
 -(void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
