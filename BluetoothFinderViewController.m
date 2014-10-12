@@ -122,7 +122,9 @@
         if(beacon.proximity == CLProximityImmediate)
         {
             NSLog(@"ADD THIS TAG");
+            [self.locationManager stopRangingBeaconsInRegion: self.rangedRegion];
             [self performSegueWithIdentifier:@"SelectedTagSegue" sender:beacon];
+            
         }
     }
 }

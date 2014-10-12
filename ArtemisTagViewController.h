@@ -8,17 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import <FYX/FYX.h>
-#import <FYX/FYXVisitManager.h>
-#import <FYX/FYXTransmitter.h>
 
 
 
-@interface ArtemisTagViewController : PFQueryTableViewController<PFLogInViewControllerDelegate, FYXServiceDelegate, FYXVisitDelegate, PFSignUpViewControllerDelegate>
+
+@interface ArtemisTagViewController : PFQueryTableViewController<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 @property CLLocationManager *locationManager;
 @property CLBeaconRegion *rangedRegion;
 @property CLBeaconRegion *beaconRegion;
-@property (nonatomic, retain) FYXVisitManager *visitManager;
+
 
 -(IBAction)addTags:(id)sender;
 

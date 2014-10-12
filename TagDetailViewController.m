@@ -67,10 +67,69 @@
     self.title = [self.TagDetail objectForKey:@"Name"];
     
     self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID major:[[self.TagDetail objectForKey:@"Major"] intValue] minor:[[self.TagDetail objectForKey:@"Minor"] intValue] identifier:self.artemisUUID.UUIDString];
-    self.leashRegion=self.rangedRegion;
-}
+    NSLog(@"notify on entry is set to %hhd", self.rangedRegion.notifyOnEntry);
+    NSLog(@"notify on exit is set to %hhd", self.rangedRegion.notifyOnExit);
+    
+    NSLog(@"regions are %@", [self.locationManager monitoredRegions]);
+    
+    self.rangedRegion = [self.locationManager.monitoredRegions member:self.rangedRegion];
+    if (self.rangedRegion) {
+       
+        self.notifyOnEntrance = self.rangedRegion.notifyOnEntry;
+        self.notifyOnExit = self.rangedRegion.notifyOnExit;
+        self.major = self.rangedRegion.major;
+        self.minor = self.rangedRegion.minor;
+        self.artemisUUID = self.rangedRegion.proximityUUID;
+        
+        
+        
+        
+        
+    }
+    else
+    {
+        self.notifyOnEntrance = self.notifyOnExit = NO;
+       
+        self.major = nil;
+        
+        self.minor = nil;
+        
+        self.artemisUUID = [[NSUUID alloc] initWithUUIDString: @"A2F065FF-426E-4043-B45C-861F801BAE2D"];
+
+
     
         
+        
+    }
+    
+    
+    self.leashRegion=self.rangedRegion;
+
+    [self.notifyOnEntranceSwitch setOn:self.rangedRegion.notifyOnEntry];
+}
+
+
+-(void)updateMonitoredRegion
+{
+   if(self.rangedRegion)
+   {
+       self.rangedRegion.notifyOnEntry = self.notifyOnEntrance;
+       self.rangedRegion.notifyOnExit = NO;
+       
+       [self.locationManager startMonitoringForRegion:self.rangedRegion];
+        
+   }
+}
+
+
+
+
+ -(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.notifyOnEntranceSwitch.on = self.notifyOnEntrance;
+    
+}
     
 -(void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:
     (CLBeaconRegion *)region
@@ -140,22 +199,7 @@
 -(IBAction)toggleNotifyEnterLeash:(UISwitch *)sender{
     self.notifyOnEntrance = sender.on;
     
-    //set update monitored region
-    NSLog(@"Toggled switch for enter leash: it is now %hhd", self.notifyOnEntrance);
-
-    self.leashRegion.notifyOnEntry = self.notifyOnEntrance;
-    [self.locationManager stopMonitoringForRegion:self.leashRegion];
-    [self.leashRegion setNotifyOnExit:NO];
-    
-    if(self.notifyOnEntrance)
-    {
-        NSLog(@"Start monitoring for background enter");
-        
-        [self.locationManager startMonitoringForRegion:self.leashRegion];
-    } else {
-        NSLog(@"Stop monitoring for background enter");
-        [self.locationManager stopMonitoringForRegion:self.leashRegion];
-    }
+    [self updateMonitoredRegion];
     
 }
 

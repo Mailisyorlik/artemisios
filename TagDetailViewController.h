@@ -26,8 +26,8 @@
 @property CLLocationManager *locationManager;
 @property CLBeaconRegion *rangedRegion;
 @property NSUUID *artemisUUID;
-@property CLBeaconMajorValue *major;
-@property CLBeaconMinorValue *minor;
+@property NSNumber *major;
+@property NSNumber *minor;
 @property CLBeacon *proximity;
 @property (nonatomic,strong) NSMutableDictionary *tags;
 @property BOOL notifyOnExit;
