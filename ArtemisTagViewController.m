@@ -95,6 +95,12 @@
 }
 
 
+-(void)didDepart:(FYXVisit *)visit;
+{
+    NSLog(@"Departed Beacon area", visit.transmitter.name);
+}
+
+
 -(void)receivedSighting:(FYXVisit *)visit updateTime:(NSDate *)updateTime RSSI:(NSNumber *)RSSI
 {
     NSLog(@"Received a sighting");
