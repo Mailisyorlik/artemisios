@@ -116,6 +116,7 @@
                 //ask parse for all data
                 [self loadObjects];
                 [self.locationManager stopMonitoringForRegion:(self.beaconRegion)];
+                
             }];
     }
 

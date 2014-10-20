@@ -59,11 +59,14 @@
 - (IBAction)saveTag:(id)sender
 {
     PFObject *newTag = [PFObject objectWithClassName:@"Tag"];
+   
+    
+    
     newTag[@"Name"] = self.tagName.text;
     newTag[@"UUID"] = self.selectedBeacon.proximityUUID.UUIDString;
     newTag[@"Major"] = self.selectedBeacon.major;
     newTag[@"Minor"] = self.selectedBeacon.minor;
-   
+    
  
    
     

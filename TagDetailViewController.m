@@ -72,8 +72,7 @@
     
     NSLog(@"regions are %@", [self.locationManager monitoredRegions]);
     
-    self.rangedRegion = [self.locationManager.monitoredRegions member:self.rangedRegion];
-    if (self.rangedRegion) {
+        if (self.rangedRegion) {
        
         self.notifyOnEntrance = self.rangedRegion.notifyOnEntry;
         self.notifyOnExit = self.rangedRegion.notifyOnExit;
