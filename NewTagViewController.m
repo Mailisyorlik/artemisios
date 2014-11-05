@@ -40,7 +40,8 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-
+  
+    
  
 
 }
@@ -107,7 +108,7 @@
                    
                    newTag.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
                    [newTag saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                       [self.navigationController popToRootViewControllerAnimated:YES];
+                                              [self.navigationController popToRootViewControllerAnimated:YES];
                    
                    }];
                }
@@ -130,6 +131,7 @@
 }
     
     
+
 
 
 - (void)didReceiveMemoryWarning

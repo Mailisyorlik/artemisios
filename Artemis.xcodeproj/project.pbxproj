@@ -35,6 +35,10 @@
 		0CC78A2319EB1A38006F4E2D /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC78A2219EB1A38006F4E2D /* Common.framework */; };
 		0CC78A2819EB1A5F006F4E2D /* ContextLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC78A2519EB1A5F006F4E2D /* ContextLocation.framework */; };
 		0CC78A2919EB1A5F006F4E2D /* DataModels.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CC78A2719EB1A5F006F4E2D /* DataModels.bundle */; };
+		0CCC3F631A09D866005EC283 /* 80-shopping-cart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCC3F621A09D866005EC283 /* 80-shopping-cart@2x.png */; };
+		0CCC3F651A09D99B005EC283 /* 02-arrow-east@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCC3F641A09D99B005EC283 /* 02-arrow-east@2x.png */; };
+		0CCC3F671A09D9D6005EC283 /* 02-arrow-east.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCC3F661A09D9D6005EC283 /* 02-arrow-east.png */; };
+		0CCC3F691A09DA5F005EC283 /* 441-help-symbol1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CCC3F681A09DA5F005EC283 /* 441-help-symbol1@2x.png */; };
 		0CCD399D190883F60069665A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD399C190883F60069665A /* Parse.framework */; };
 		0CCD399F190884360069665A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD399E190884360069665A /* AudioToolbox.framework */; };
 		0CCD39A11908844B0069665A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39A01908844B0069665A /* CFNetwork.framework */; };
@@ -123,6 +127,10 @@
 		0CC78A2219EB1A38006F4E2D /* Common.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Common.framework; sourceTree = "<group>"; };
 		0CC78A2519EB1A5F006F4E2D /* ContextLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ContextLocation.framework; sourceTree = "<group>"; };
 		0CC78A2719EB1A5F006F4E2D /* DataModels.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DataModels.bundle; sourceTree = "<group>"; };
+		0CCC3F621A09D866005EC283 /* 80-shopping-cart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "80-shopping-cart@2x.png"; sourceTree = "<group>"; };
+		0CCC3F641A09D99B005EC283 /* 02-arrow-east@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-arrow-east@2x.png"; sourceTree = "<group>"; };
+		0CCC3F661A09D9D6005EC283 /* 02-arrow-east.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "02-arrow-east.png"; sourceTree = "<group>"; };
+		0CCC3F681A09DA5F005EC283 /* 441-help-symbol1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "441-help-symbol1@2x.png"; sourceTree = "<group>"; };
 		0CCD399C190883F60069665A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0CCD399E190884360069665A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0CCD39A01908844B0069665A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -231,7 +239,11 @@
 				0CF414EE19CCF3B800A1B38B /* far.png */,
 				0CF414F019CCF3C900A1B38B /* near.png */,
 				0CF414F119CCF3C900A1B38B /* immediate.png */,
+				0CCC3F621A09D866005EC283 /* 80-shopping-cart@2x.png */,
 				0C5C370718D9269900A55664 /* Main.storyboard */,
+				0CCC3F681A09DA5F005EC283 /* 441-help-symbol1@2x.png */,
+				0CCC3F661A09D9D6005EC283 /* 02-arrow-east.png */,
+				0CCC3F641A09D99B005EC283 /* 02-arrow-east@2x.png */,
 				0C75B95B1919BCAC000BF2F8 /* TagDetailViewController.h */,
 				0C75B95C1919BCAC000BF2F8 /* TagDetailViewController.m */,
 				0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */,
@@ -501,19 +513,23 @@
 				0CF414EF19CCF3B800A1B38B /* far.png in Resources */,
 				0CF414F219CCF3C900A1B38B /* near.png in Resources */,
 				0C5C371118D9269900A55664 /* Images.xcassets in Resources */,
+				0CCC3F691A09DA5F005EC283 /* 441-help-symbol1@2x.png in Resources */,
 				244C370918F4AEFE00899958 /* _icon_72.png in Resources */,
 				244C370D18F4AEFE00899958 /* magnetometer.png in Resources */,
 				0C5C370018D9269900A55664 /* InfoPlist.strings in Resources */,
 				244C370C18F4AEFE00899958 /* gyroscope.png in Resources */,
 				244C370F18F4AEFE00899958 /* relativehumidity.png in Resources */,
 				244C371018F4AEFE00899958 /* temperature.png in Resources */,
+				0CCC3F671A09D9D6005EC283 /* 02-arrow-east.png in Resources */,
 				0CF414F319CCF3C900A1B38B /* immediate.png in Resources */,
 				244C370E18F4AEFE00899958 /* objecttemperature.png in Resources */,
 				244C370818F4AEFE00899958 /* _icon_57.png in Resources */,
 				244C370618F4AEFE00899958 /* _icon@2x_114.png in Resources */,
 				244C370B18F4AEFE00899958 /* barometer.png in Resources */,
+				0CCC3F631A09D866005EC283 /* 80-shopping-cart@2x.png in Resources */,
 				244C370718F4AEFE00899958 /* _icon@2x_144.png in Resources */,
 				0C5C370918D9269900A55664 /* Main.storyboard in Resources */,
+				0CCC3F651A09D99B005EC283 /* 02-arrow-east@2x.png in Resources */,
 				244C370A18F4AEFE00899958 /* accelerometer.png in Resources */,
 				0CC78A2919EB1A5F006F4E2D /* DataModels.bundle in Resources */,
 			);

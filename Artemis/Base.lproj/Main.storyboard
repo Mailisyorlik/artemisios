@@ -265,6 +265,19 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="80-shopping-cart.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cjp-58-zvC">
+                                <rect key="frame" x="140" y="239" width="41" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="02-arrow-east.png" translatesAutoresizingMaskIntoConstraints="NO" id="1yv-fT-hE8">
+                                <rect key="frame" x="116" y="144" width="88" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="441-help-symbol1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xxf-7R-k3E">
+                                <rect key="frame" x="140" y="324" width="56" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1173566499" green="0.45496098130000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -298,8 +311,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="02-arrow-east.png" width="19" height="16"/>
         <image name="15-tags" width="24" height="25"/>
         <image name="19-gear" width="26" height="26"/>
+        <image name="441-help-symbol1.png" width="28" height="28"/>
+        <image name="80-shopping-cart.png" width="26" height="19"/>
         <image name="Map" width="26" height="21"/>
         <image name="far.png" width="441" height="441"/>
         <image name="immediate.png" width="441" height="441"/>
