@@ -15,7 +15,7 @@
 @property (nonatomic, assign) id<UIPickerViewDataSource> datasource;
 @property (nonatomic, readonly) NSInteger numberOfComponents;
 @property (nonatomic)BOOL showSelectionIndicator;
-
+@property (retain, nonatomic) IBOutlet UIButton *saveTag;
 
 
 
