@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C036EC31A2CDD29002684D3 /* HubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C036EC21A2CDD29002684D3 /* HubViewController.m */; };
 		0C2B90F01906F37700324ED5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2B90EF1906F37700324ED5 /* CoreLocation.framework */; };
 		0C2D3CFA1909D00400EEA5D2 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C2D3CF91909D00400EEA5D2 /* FacebookSDK.framework */; };
 		0C4C3B9518F8B03C009971F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4C3B9418F8B03C009971F1 /* MapViewController.m */; };
@@ -89,6 +90,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C036EC11A2CDD27002684D3 /* HubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HubViewController.h; sourceTree = "<group>"; };
+		0C036EC21A2CDD29002684D3 /* HubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HubViewController.m; sourceTree = "<group>"; };
 		0C2B90EF1906F37700324ED5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0C2D3CF91909D00400EEA5D2 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		0C4C3B9318F8B03C009971F1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; usesTabs = 0; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -246,6 +249,8 @@
 				0CCC3F641A09D99B005EC283 /* 02-arrow-east@2x.png */,
 				0C75B95B1919BCAC000BF2F8 /* TagDetailViewController.h */,
 				0C75B95C1919BCAC000BF2F8 /* TagDetailViewController.m */,
+				0C036EC11A2CDD27002684D3 /* HubViewController.h */,
+				0C036EC21A2CDD29002684D3 /* HubViewController.m */,
 				0C9FCA4F1909DEF000DB3012 /* NewTagViewController.h */,
 				0C9FCA501909DEF000DB3012 /* NewTagViewController.m */,
 				0C9FCA4C1909DEA300DB3012 /* BluetoothFinderViewController.h */,
@@ -554,6 +559,7 @@
 				0C75B95D1919BCAC000BF2F8 /* TagDetailViewController.m in Sources */,
 				0CCD39B6190896D10069665A /* ArtemisSignUpController.m in Sources */,
 				0C9FCA4E1909DEA300DB3012 /* BluetoothFinderViewController.m in Sources */,
+				0C036EC31A2CDD29002684D3 /* HubViewController.m in Sources */,
 				244C36F818F4AEE200899958 /* Sensors.m in Sources */,
 				0CCD39B3190896B00069665A /* ArtemisLoginController.m in Sources */,
 				0C4C3B9F18F8B9BF009971F1 /* SettingsViewController.m in Sources */,
