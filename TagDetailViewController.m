@@ -67,8 +67,7 @@
     self.title = [self.TagDetail objectForKey:@"Name"];
     
     self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID major:[[self.TagDetail objectForKey:@"Major"] intValue] minor:[[self.TagDetail objectForKey:@"Minor"] intValue] identifier:self.artemisUUID.UUIDString];
-    NSLog(@"notify on entry is set to %hhd", self.rangedRegion.notifyOnEntry);
-    NSLog(@"notify on exit is set to %hhd", self.rangedRegion.notifyOnExit);
+  
     
     NSLog(@"regions are %@", [self.locationManager monitoredRegions]);
     

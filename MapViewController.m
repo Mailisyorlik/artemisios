@@ -59,18 +59,15 @@
     [self.mapView setShowsUserLocation:YES];
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     
+
+    
     
     PFQuery *query = [PFQuery queryWithClassName: @"Tag"];
     [query setLimit:1000];
     [query setSkip: 1000];
     
     
-    CLLocationCoordinate2D coord;
-    coord.longitude = (CLLocationDegrees)-119.813803;
-    coord.latitude = (CLLocationDegrees)39.5272;
-    [annotation setCoordinate:coord];
-    [annotation setTitle:@""];
-    [self.mapView addAnnotation:annotation];
+   
     
   
     

@@ -47,7 +47,6 @@
 		0CCD39A51908847B0069665A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39A41908847B0069665A /* MobileCoreServices.framework */; };
 		0CCD39A7190884850069665A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39A6190884850069665A /* QuartzCore.framework */; };
 		0CCD39A91908848F0069665A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39A81908848E0069665A /* Security.framework */; };
-		0CCD39AB1908849B0069665A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39AA1908849B0069665A /* StoreKit.framework */; };
 		0CCD39AD190884A60069665A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CCD39AC190884A60069665A /* SystemConfiguration.framework */; };
 		0CCD39B01908869E0069665A /* ArtemisTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCD39AF1908869E0069665A /* ArtemisTagViewController.m */; };
 		0CCD39B3190896B00069665A /* ArtemisLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CCD39B2190896B00069665A /* ArtemisLoginController.m */; };
@@ -141,7 +140,6 @@
 		0CCD39A41908847B0069665A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0CCD39A6190884850069665A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0CCD39A81908848E0069665A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		0CCD39AA1908849B0069665A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0CCD39AC190884A60069665A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0CCD39AE1908869E0069665A /* ArtemisTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtemisTagViewController.h; sourceTree = "<group>"; };
 		0CCD39AF1908869E0069665A /* ArtemisTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtemisTagViewController.m; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 				0CCD39BA19089A070069665A /* Social.framework in Frameworks */,
 				0CCD39AD190884A60069665A /* SystemConfiguration.framework in Frameworks */,
 				0CC78A2019EB1A0D006F4E2D /* ContextCore.framework in Frameworks */,
-				0CCD39AB1908849B0069665A /* StoreKit.framework in Frameworks */,
 				0CCD39A91908848F0069665A /* Security.framework in Frameworks */,
 				0CCD39A7190884850069665A /* QuartzCore.framework in Frameworks */,
 				0C2D3CFA1909D00400EEA5D2 /* FacebookSDK.framework in Frameworks */,
@@ -292,7 +289,6 @@
 				0CF414FF19DE358F00A1B38B /* NetworkServices.embeddedframework */,
 				0CCD39B919089A070069665A /* Social.framework */,
 				0CCD39AC190884A60069665A /* SystemConfiguration.framework */,
-				0CCD39AA1908849B0069665A /* StoreKit.framework */,
 				0CCD39A81908848E0069665A /* Security.framework */,
 				0CCD39A6190884850069665A /* QuartzCore.framework */,
 				0CCD39A41908847B0069665A /* MobileCoreServices.framework */,
@@ -477,9 +473,13 @@
 				ORGANIZATIONNAME = artemis;
 				TargetAttributes = {
 					0C5C36F118D9269900A55664 = {
+						DevelopmentTeam = AP5L8A28W5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 							com.apple.iOS = {
 								enabled = 0;
@@ -698,6 +698,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -707,12 +709,14 @@
 					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
 					"$(PROJECT_DIR)/ContextProfiling.embeddedframework",
 					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Artemis/Artemis-Prefix.pch";
 				INFOPLIST_FILE = "Artemis/Artemis-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -723,6 +727,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -732,12 +739,14 @@
 					"$(PROJECT_DIR)/ContextLocation.embeddedframework",
 					"$(PROJECT_DIR)/ContextProfiling.embeddedframework",
 					"$(PROJECT_DIR)/NetworkServices.embeddedframework",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Artemis/Artemis-Prefix.pch";
 				INFOPLIST_FILE = "Artemis/Artemis-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
