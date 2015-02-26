@@ -21,7 +21,7 @@
         // Custom initialization
     }
     return self;
-
+    
 }
 
 
@@ -32,25 +32,24 @@
     if (error) {
         NSLog(@"Error publishing service: %@", [error localizedDescription]);
     }
-
-
+    
+    
 }
 
 
 
 
 - (void)viewDidAppear:(BOOL)animated {
-        [super viewDidAppear:animated];
-        [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
-    [self.locationManager startMonitoringForRegion:self.rangedRegion];
-     }
+    [super viewDidAppear:animated];
+    [self.locationManager startRangingBeaconsInRegion: self.rangedRegion];
+}
 
 
 - (void)viewDidDisappear:(BOOL)animated {
-        [super viewDidAppear:animated];
-        [self.locationManager stopRangingBeaconsInRegion: self.rangedRegion];
-
-    }
+    [super viewDidAppear:animated];
+    [self.locationManager stopRangingBeaconsInRegion: self.rangedRegion];
+    
+}
 
 
 - (void)viewDidLoad
@@ -67,110 +66,123 @@
     self.title = [self.TagDetail objectForKey:@"Name"];
     
     self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID major:[[self.TagDetail objectForKey:@"Major"] intValue] minor:[[self.TagDetail objectForKey:@"Minor"] intValue] identifier:self.artemisUUID.UUIDString];
+    
+    NSLog(@"Ranged region is %@", self.rangedRegion);
     NSLog(@"notify on entry is set to %hhd", self.rangedRegion.notifyOnEntry);
     NSLog(@"notify on exit is set to %hhd", self.rangedRegion.notifyOnExit);
     
     NSLog(@"regions are %@", [self.locationManager monitoredRegions]);
     
-        if (self.rangedRegion) {
-       
-        self.notifyOnEntrance = self.rangedRegion.notifyOnEntry;
-        self.notifyOnExit = self.rangedRegion.notifyOnExit;
+    
+    if ([[self.locationManager monitoredRegions] member:self.rangedRegion]) {
+        
+        NSLog(@"Found target region");
+        
+        CLBeaconRegion *targetRegion = [[self.locationManager monitoredRegions] member:self.rangedRegion];
+        NSLog(@"notify on entry is set to %hhd", targetRegion.notifyOnEntry);
+        NSLog(@"notify on exit is set to %hhd", targetRegion.notifyOnExit);
+        
+        self.notifyOnEntrance = targetRegion.notifyOnEntry;
+        self.notifyOnExit = targetRegion.notifyOnExit;
+        NSLog(@"Notify on entrance is %hhd", self.notifyOnEntrance);
         self.major = self.rangedRegion.major;
         self.minor = self.rangedRegion.minor;
         self.artemisUUID = self.rangedRegion.proximityUUID;
         
-        
-        
-        
+        NSLog(@"Ranged region is %@", self.rangedRegion);
         
     }
     else
     {
         self.notifyOnEntrance = self.notifyOnExit = NO;
-       
-        self.major = nil;
         
-        self.minor = nil;
+        self.major = [self.TagDetail objectForKey:@"Major"];
+        
+        self.minor = [self.TagDetail objectForKey:@"Minor"];
         
         self.artemisUUID = [[NSUUID alloc] initWithUUIDString: @"A2F065FF-426E-4043-B45C-861F801BAE2D"];
-
-
-    
-        
         
     }
     
     
     self.leashRegion=self.rangedRegion;
-
+    
     [self.notifyOnEntranceSwitch setOn:self.rangedRegion.notifyOnEntry];
 }
 
 
 -(void)updateMonitoredRegion
 {
-   if(self.rangedRegion)
-   {
-       self.rangedRegion.notifyOnEntry = self.notifyOnEntrance;
-       self.rangedRegion.notifyOnExit = NO;
-       
-       [self.locationManager startMonitoringForRegion:self.rangedRegion];
+    if(self.rangedRegion)
+    {
+        self.rangedRegion.notifyOnEntry = self.notifyOnEntrance;
+        self.rangedRegion.notifyOnExit = NO;
         
-   }
+        [self.locationManager startMonitoringForRegion:self.rangedRegion];
+        
+        NSLog(@"!!!!!!!!!!!!!!!");
+        
+        NSLog(@"regions are %@", [self.locationManager monitoredRegions]);
+        
+        CLBeaconRegion *testRegion = [[self.locationManager monitoredRegions] member:self.rangedRegion];
+        NSLog(@"notify on entry is set to %hhd", testRegion.notifyOnEntry);
+        NSLog(@"notify on exit is set to %hhd", testRegion.notifyOnExit);
+        
+        
+    }
 }
 
 
 
 
- -(void)viewWillAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.notifyOnEntranceSwitch.on = self.notifyOnEntrance;
     
 }
-    
+
 -(void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:
-    (CLBeaconRegion *)region
+(CLBeaconRegion *)region
+{
+    NSLog(@"Ranged %lu", (unsigned long)[beacons count]);
+    
+    
+    for(CLBeacon *beacon in beacons)
     {
-        NSLog(@"Ranged %lu", (unsigned long)[beacons count]);
         
-        
-        for(CLBeacon *beacon in beacons)
-        {
-            
         
         if(beacon.proximity == CLProximityNear) { //End first if, start if else
-                        NSLog(@"Show Near");
-                        [self.near setHidden:NO];
-                        [self.immediate setHidden: YES];
-                        [self.far setHidden: YES];
-    } else if(beacon.proximity == CLProximityFar) { //END THE 2nd, start the 3rd
-                        NSLog(@"Show Far");
-                        [self.near setHidden:YES];
-                        [self.immediate setHidden: YES];
-                        [self.far setHidden: NO];
-    } else if(beacon.proximity == CLProximityImmediate) { //end the 3rd, start the 4th
-                        NSLog(@"Show Immediate");
-                        [self.near setHidden:YES];
-                        [self.immediate setHidden:NO];
-                        [self.far setHidden:YES];
-        
-    
-        
-        
-        }  //END THE 4th IF statement
+            NSLog(@"Show Near");
+            [self.near setHidden:NO];
+            [self.immediate setHidden: YES];
+            [self.far setHidden: YES];
+        } else if(beacon.proximity == CLProximityFar) { //END THE 2nd, start the 3rd
+            NSLog(@"Show Far");
+            [self.near setHidden:YES];
+            [self.immediate setHidden: YES];
+            [self.far setHidden: NO];
+        } else if(beacon.proximity == CLProximityImmediate) { //end the 3rd, start the 4th
+            NSLog(@"Show Immediate");
+            [self.near setHidden:YES];
+            [self.immediate setHidden:NO];
+            [self.far setHidden:YES];
             
-    else {
-        NSLog(@"Not found beacon");
-        [self.near setHidden:(YES)];
-        [self.immediate setHidden:(YES)];
-        [self.far setHidden:(YES)];
+            
+            
+            
+        }  //END THE 4th IF statement
         
-    }
+        else {
+            NSLog(@"Not found beacon");
+            [self.near setHidden:(YES)];
+            [self.immediate setHidden:(YES)];
+            [self.far setHidden:(YES)];
+            
+        }
         
     } // END the FOR LOOP
-    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -179,21 +191,21 @@
 
 
 -(IBAction)toggleNotifyExitLeash:(UISwitch *)sender{
-   /* self.notifyOnExit = sender.on;
-    
-    //set update monitered region
-    NSLog(@"Toggled the switch for leash");
-    
-    if(self.notifyOnExit)
-    {
-        NSLog(@"Start monitoring for background enter and exit");
-        self.leashRegion.notifyOnExit = self.notifyOnExit;
-        self.leashRegion.notifyOnEntry = self.notifyOnExit;
-        
-        [self.locationManager stopMonitoringForRegion:self.leashRegion];
-        
-    }
-  */
+    /* self.notifyOnExit = sender.on;
+     
+     //set update monitered region
+     NSLog(@"Toggled the switch for leash");
+     
+     if(self.notifyOnExit)
+     {
+     NSLog(@"Start monitoring for background enter and exit");
+     self.leashRegion.notifyOnExit = self.notifyOnExit;
+     self.leashRegion.notifyOnEntry = self.notifyOnExit;
+     
+     [self.locationManager stopMonitoringForRegion:self.leashRegion];
+     
+     }
+     */
 }
 -(IBAction)toggleNotifyEnterLeash:(UISwitch *)sender{
     self.notifyOnEntrance = sender.on;
@@ -205,14 +217,14 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
