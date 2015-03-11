@@ -103,7 +103,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     self.sensorsEnabled = [[NSMutableArray alloc] init];
-    if (!self.d.p.isConnected) {
+    if (!self.d.p.state) {
         self.d.manager.delegate = self;
         [self.d.manager connectPeripheral:self.d.p options:nil];
     }

@@ -68,8 +68,8 @@
     self.rangedRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.artemisUUID major:[[self.TagDetail objectForKey:@"Major"] intValue] minor:[[self.TagDetail objectForKey:@"Minor"] intValue] identifier:self.artemisUUID.UUIDString];
     
     NSLog(@"Ranged region is %@", self.rangedRegion);
-    NSLog(@"notify on entry is set to %hhd", self.rangedRegion.notifyOnEntry);
-    NSLog(@"notify on exit is set to %hhd", self.rangedRegion.notifyOnExit);
+    NSLog(@"YES:%d", self.rangedRegion.notifyOnEntry);
+    NSLog(@"YES: %d", self.rangedRegion.notifyOnExit);
     
     NSLog(@"regions are %@", [self.locationManager monitoredRegions]);
     
@@ -79,12 +79,12 @@
         NSLog(@"Found target region");
         
         CLBeaconRegion *targetRegion = [[self.locationManager monitoredRegions] member:self.rangedRegion];
-        NSLog(@"notify on entry is set to %hhd", targetRegion.notifyOnEntry);
-        NSLog(@"notify on exit is set to %hhd", targetRegion.notifyOnExit);
+        NSLog(@"YES: %d", targetRegion.notifyOnEntry);
+        NSLog(@"YES: %d", targetRegion.notifyOnExit);
         
         self.notifyOnEntrance = targetRegion.notifyOnEntry;
         self.notifyOnExit = targetRegion.notifyOnExit;
-        NSLog(@"Notify on entrance is %hhd", self.notifyOnEntrance);
+        NSLog(@"YES: %d", self.notifyOnEntrance);
         self.major = self.rangedRegion.major;
         self.minor = self.rangedRegion.minor;
         self.artemisUUID = self.rangedRegion.proximityUUID;
@@ -125,8 +125,8 @@
         NSLog(@"regions are %@", [self.locationManager monitoredRegions]);
         
         CLBeaconRegion *testRegion = [[self.locationManager monitoredRegions] member:self.rangedRegion];
-        NSLog(@"notify on entry is set to %hhd", testRegion.notifyOnEntry);
-        NSLog(@"notify on exit is set to %hhd", testRegion.notifyOnExit);
+        NSLog(@"YES: %d", testRegion.notifyOnEntry);
+        NSLog(@"YES: %d", testRegion.notifyOnExit);
         
         
     }
