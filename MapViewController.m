@@ -30,7 +30,6 @@
     
  
     
-    
         [self.mapView.delegate self];
         [self.mapView setShowsUserLocation:YES];
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -55,6 +54,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[self locationManager] requestWhenInUseAuthorization];
+    
     [self.mapView.delegate self];
     [self.mapView setShowsUserLocation:YES];
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -63,8 +64,16 @@
     
     
     PFQuery *query = [PFQuery queryWithClassName: @"Tag"];
-    [query setLimit:1000];
-    [query setSkip: 1000];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error) {
+            NSLog(@"%lu", (unsigned long)[objects count]);
+            [allTags addObjectsFromArray:objects];
+            
+             for(PFObject *currentTag in allTags) {
+                 NSLog(@"%@", currentTag[@"title"]);
+             }
+        }
+    }];
     
     
    
