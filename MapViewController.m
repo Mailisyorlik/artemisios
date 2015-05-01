@@ -30,7 +30,6 @@
     
  
     
-    
         [self.mapView.delegate self];
         [self.mapView setShowsUserLocation:YES];
         MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -55,19 +54,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[self locationManager] requestWhenInUseAuthorization];
+    
     [self.mapView.delegate self];
     [self.mapView setShowsUserLocation:YES];
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     
+    NSMutableArray *allTags = [NSMutableArray array];
     
     PFQuery *query = [PFQuery queryWithClassName: @"Tag"];
-    [query setLimit:1000];
-    [query setSkip: 1000];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error) {
+            NSLog(@"%lu", (unsigned long)[objects count]);
+            [allTags addObjectsFromArray:objects];
+            
+             for(PFObject *currentTag in allTags) {
+                 NSLog(@"%@", currentTag[@"title"]);
+             }
+        }
+    }];
     
     
     CLLocationCoordinate2D coord;
-    coord.longitude = (CLLocationDegrees)-119.813803;
-    coord.latitude = (CLLocationDegrees)39.5272;
+    coord.longitude = (CLLocationDegrees)-119.816756;
+    coord.latitude = (CLLocationDegrees)39.52535;
     [annotation setCoordinate:coord];
     [annotation setTitle:@""];
     [self.mapView addAnnotation:annotation];
