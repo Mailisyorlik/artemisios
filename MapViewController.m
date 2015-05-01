@@ -69,7 +69,21 @@
             [allTags addObjectsFromArray:objects];
             
              for(PFObject *currentTag in allTags) {
-                 NSLog(@"%@", currentTag[@"title"]);
+                
+                 NSLog(@"%@", currentTag[@"LastLocation"]);
+                 
+                 PFGeoPoint *coordinate = currentTag[@"LastLocation"];
+                 
+                 CLLocationCoordinate2D coord;
+                 coord.longitude = (CLLocationDegrees)coordinate.longitude;
+                 coord.latitude = (CLLocationDegrees)coordinate.latitude;
+                 
+                 MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+                 
+                 [annotation setCoordinate:coord];
+                 [annotation setTitle:currentTag[@"Name"]];
+                 [self.mapView addAnnotation:annotation];
+                 
              }
         }
     }];
